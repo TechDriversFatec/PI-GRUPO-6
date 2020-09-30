@@ -1,5 +1,5 @@
 # PROJETO INTEGRADOR - GRUPO 6
-_FATEC São José dos Campos_
+_FATEC Profº Jessen Vidal, São José dos Campos, 2º semestre de 2020, Tecnólogo em Banco de Dados_
 
 _________________________________________________________________________________________________
 **Grupo:**
