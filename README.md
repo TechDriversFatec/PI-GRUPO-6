@@ -1,5 +1,6 @@
 # PI-GRUPO-6
 
+
 **Grupo:**
 - Arnaldo Pascoal Almeida Barbosa
 - Carlos Henrique da Silva Lopes: https://www.linkedin.com/in/carlos-henrique-54754a99/
@@ -9,8 +10,10 @@
 - Helen Cristina Alevato Rodrigues: https://www.linkedin.com/in/helen-alevato-ab15b6177
 - José Francisco Forneiro Junior
 
+
 **Objetivo**
 Sistema de digitação e edição de contas
+
 
 # SPRINT 0
 
