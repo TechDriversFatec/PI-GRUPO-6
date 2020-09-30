@@ -1,6 +1,6 @@
 # PI-GRUPO-6
 
-
+_________________________________________________________________________________________________
 **Grupo:**
 - Arnaldo Pascoal Almeida Barbosa
 - Carlos Henrique da Silva Lopes: https://www.linkedin.com/in/carlos-henrique-54754a99/
@@ -11,10 +11,12 @@
 - José Francisco Forneiro Junior
 
 
+_________________________________________________________________________________________________
 **Objetivo**
 Sistema de digitação e edição de contas
 
 
+_________________________________________________________________________________________________
 # SPRINT 0
 
 **Pasta:** https://github.com/rangelandrade/PI-GRUPO-6/tree/master/EntregaSprint0
