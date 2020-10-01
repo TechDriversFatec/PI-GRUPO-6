@@ -30,7 +30,7 @@ Motivo-> Alterar, visualizar e separar os tipos de contas para auxiliar na corre
 - Prioridade 2 -> Agente digitador, gostaria de poder gerenciar cada tipo de conta em um campo específico, que seja no modelo da empresa escolhida, pois a dificuldade está na forma que o digitador coloca os dados no sistema, cada conta tendo seus campos específicos ficará mais intuitivo e prático para que o resultado final tenha mais agilidade.
 Motivo-> Analisar, alterar e acessar os campos necessários referentes a cada conta.
 
-### **Wireframes**
+**Wireframes**
 
 - Telas
 
