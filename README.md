@@ -35,3 +35,15 @@ Motivo-> Analisar, alterar e acessar os campos necessários referentes a cada co
 - Telas
 
 **Vídeo:** https://youtu.be/moQdPIZ4aZQ
+_________________________________________________________________________________________________
+# SPRINT 1
+
+**Pasta:** https://github.com/rangelandrade/PI-GRUPO-6/tree/master/ProjetoPIGrupo6
+
+### **Itens entregáveis:**
+**Início Banco de Dados**
+
+**Início Back End**
+
+**Vídeo:** https://drive.google.com/file/d/1OuOShNbeQQrYNLkN5BvrwVTcF5X3buaX/view
+
