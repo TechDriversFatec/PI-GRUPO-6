@@ -71,8 +71,8 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="CPF:" />
-                        <TextField fx:id="txtCep" />
+                        <Label text="CEP:" />
+                        <TextField fx:id="txtCep" onKeyReleased="#txtCepKeyReleased" />
                      </children>
                   </VBox>
                </children>
@@ -138,7 +138,7 @@
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Data Leitura Atual:" />
-                        <TextField fx:id="txtDataLeituraAtual" />
+                        <DatePicker fx:id="txtDataLeituraAtual" />
                      </children>
                   </VBox>
                </children>
@@ -148,13 +148,13 @@
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Data Leitura Anterior:" />
-                        <TextField fx:id="txtDataLeituraAnterior" />
+                        <DatePicker fx:id="txtDataLeituraAnterior" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Data de Vencimento:" />
-                        <TextField fx:id="txtDataVencimento" />
+                        <DatePicker fx:id="txtDataVencimento" />
                      </children>
                   </VBox>
                   <VBox prefHeight="63.0" prefWidth="150.0">

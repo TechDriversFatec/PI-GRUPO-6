@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -48,6 +49,33 @@ public class ClienteController {
 
     @FXML
     private TextField txtBairro;
+    
+    @FXML
+    private void txtTelefoneKeyReleased() {
+    	TextFieldFormatter tff = new TextFieldFormatter();
+    	tff.setMask("(##)#####-####");
+    	tff.setCaracteresValidos("0123456789");
+    	tff.setTf(txtTelefone);
+    	tff.formatter();
+    }
+    
+    @FXML
+    private void txtCpfKeyReleased() {
+    	TextFieldFormatter tff = new TextFieldFormatter();
+    	tff.setMask("###.###.###-##");
+    	tff.setCaracteresValidos("0123456789");
+    	tff.setTf(txtCpf);
+    	tff.formatter();
+    }
+    
+    @FXML
+    private void txtCepKeyReleased() {
+    	TextFieldFormatter tff = new TextFieldFormatter();
+    	tff.setMask("#####-###");
+    	tff.setCaracteresValidos("0123456789");
+    	tff.setTf(txtCep);
+    	tff.formatter();
+    }
 
     @FXML
     void executarClickCadastrar(ActionEvent event) {
@@ -79,32 +107,5 @@ public class ClienteController {
     	txtTelefone.setText("");
     	
 	}
-
-    /*@FXML
-	private void executarClickCadastrar(ActionEvent evento) {
-		String texto = txtConteudo.getText();
-		lblMensagem.setText(texto);
-	}
-	@FXML
-	private void executarClickBuscar(ActionEvent evento) {
-		String texto = txtConteudo.getText();
-		lblMensagem.setText(texto);
-	}
-	@FXML
-	private void executarClickEditar(ActionEvent evento) {
-		String texto = txtConteudo.getText();
-		lblMensagem.setText(texto);
-	}
-	@FXML
-	private void executarClickLimpar(ActionEvent evento) {
-		String texto = txtConteudo.getText();
-		lblMensagem.setText(texto);
-	}
-
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
-	}*/
 
 }

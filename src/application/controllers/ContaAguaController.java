@@ -1,5 +1,6 @@
 package application.controllers;
 
+import application.util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -55,7 +56,7 @@ public class ContaAguaController {
     private TextField txtConsumo;
 
     @FXML
-    private TextField txtDataLeituraAtual;
+    private DatePicker txtDataLeituraAtual;
 
     @FXML
     private TextField txtRua;
@@ -79,10 +80,19 @@ public class ContaAguaController {
     private TextField txtHidrometro;
 
     @FXML
-    private TextField txtDataLeituraAnterior;
+    private DatePicker txtDataLeituraAnterior;
 
     @FXML
     private TextField txtBairro;
+    
+    @FXML
+    private void txtCepKeyReleased() {
+    	TextFieldFormatter tff = new TextFieldFormatter();
+    	tff.setMask("#####-###");
+    	tff.setCaracteresValidos("0123456789");
+    	tff.setTf(txtCep);
+    	tff.formatter();
+    }
 
 	@FXML
     void clickLimpar(ActionEvent event) {
@@ -105,9 +115,9 @@ public class ContaAguaController {
     	txtConsumo.setText("");
     	txtValorLeituraAtual.setText("");
     	txtValorLeituraAnterior.setText("");
-    	txtDataLeituraAtual.setText("");
-    	txtDataLeituraAnterior.setText("");
-//    	txtDataVencimento.setValue();
+    	txtDataLeituraAtual.setValue(null);
+    	txtDataLeituraAnterior.setValue(null);
+    	txtDataVencimento.setValue(null);
     	txtTotalPagar.setText("");
     }
 

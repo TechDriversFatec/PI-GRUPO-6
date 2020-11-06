@@ -1,8 +1,10 @@
 package application.controllers;
 
+import application.util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
@@ -49,10 +51,10 @@ public class ContaLuzController {
 
     @FXML
     private TextField txtCodIdentificacaoConta;
-
+    
     @FXML
     private TextField txtValorLeituraAnterior;
-
+    
     @FXML
     private TextField txtTpFornecimento;
 
@@ -60,7 +62,7 @@ public class ContaLuzController {
     private TextField txtConsumo;
 
     @FXML
-    private TextField txtDataLeituraAtual;
+    private DatePicker txtDataLeituraAtual;
 
     @FXML
     private TextField txtContaMes;
@@ -75,9 +77,6 @@ public class ContaLuzController {
     private TextField txtClasseSubclasse;
 
     @FXML
-    private TextField txtDataDeVencimento;
-
-    @FXML
     private TextField txtModTarifaria;
 
     @FXML
@@ -87,13 +86,23 @@ public class ContaLuzController {
     private TextField txtCep;
 
     @FXML
-    private TextField txtDataLeituraAnterior;
+    private DatePicker txtDataLeituraAnterior;
 
     @FXML
     private TextField txtBairro;
+
+    @FXML
+    private DatePicker txtDataVencimento;
     
     @FXML
-    private TextField txtDataVencimento;
+    private void txtCepKeyReleased() {
+
+    	TextFieldFormatter tff = new TextFieldFormatter();
+    	tff.setMask("#####-###");
+    	tff.setCaracteresValidos("0123456789");
+    	tff.setTf(txtCep);
+    	tff.formatter();
+    }
     
     
     @FXML
@@ -120,9 +129,9 @@ public class ContaLuzController {
     	txtConsumo.setText("");
     	txtValorLeituraAtual.setText("");
     	txtValorLeituraAnterior.setText("");
-    	txtDataLeituraAtual.setText("");
-    	txtDataLeituraAnterior.setText("");
-    	txtDataVencimento.setText("");
+    	txtDataLeituraAtual.setValue(null);
+    	txtDataLeituraAnterior.setValue(null);
+    	txtDataVencimento.setValue(null);
     	txtTotalPagar.setText("");
     }
     
