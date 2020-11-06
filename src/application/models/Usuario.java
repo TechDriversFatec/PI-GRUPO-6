@@ -1,4 +1,4 @@
-package sistema;
+package application.models;
 
 public class Usuario {
 	
