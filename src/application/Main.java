@@ -31,7 +31,7 @@ public class Main extends Application {
         try {
             // Carrega o root layout do arquivo fxml.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("Menu.fxml"));
+            loader.setLocation(Main.class.getResource("views/Menu.fxml"));
             rootLayout = (BorderPane) loader.load();
             
             // Mostra a scene (cena) contendo o root layout.
@@ -50,7 +50,7 @@ public class Main extends Application {
         try {
             // Carrega o person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("CadastroUsuario.fxml"));
+            loader.setLocation(Main.class.getResource("views/CadastroUsuario.fxml"));
             AnchorPane cadastroUsuario = (AnchorPane) loader.load();
 //            cadastroUsuario.
             

@@ -13,13 +13,16 @@
          <font>
             <Font size="24.0" />
          </font></Label>
-      <TextField fx:id="txtNumero" layoutX="209.0" layoutY="322.0" prefHeight="25.0" prefWidth="307.0" />
-      <TextField fx:id="txtRua" layoutX="209.0" layoutY="290.0" prefHeight="25.0" prefWidth="307.0" />
-      <TextField fx:id="txtBairro" layoutX="209.0" layoutY="258.0" prefHeight="25.0" prefWidth="307.0" />
-      <TextField fx:id="txtCidade" layoutX="209.0" layoutY="225.0" prefHeight="25.0" prefWidth="307.0" />
-      <TextField fx:id="txtUf" layoutX="209.0" layoutY="192.0" prefHeight="25.0" prefWidth="307.0" />
-      <TextField fx:id="txtComplemento" layoutX="209.0" layoutY="354.0" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtNomeCliente" layoutX="209.0" layoutY="128.0" prefHeight="25.0" prefWidth="307.0" />
       <TextField fx:id="txtCpf" layoutX="209.0" layoutY="160.0" onKeyReleased="#txtCpfKeyReleased" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtUf" layoutX="209.0" layoutY="192.0" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtCidade" layoutX="209.0" layoutY="225.0" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtBairro" layoutX="209.0" layoutY="258.0" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtRua" layoutX="209.0" layoutY="290.0" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtNumero" layoutX="209.0" layoutY="322.0" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtComplemento" layoutX="209.0" layoutY="354.0" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtCep" layoutX="209.0" layoutY="386.0" onKeyReleased="#txtCepKeyReleased" prefHeight="25.0" prefWidth="307.0" />
+      <TextField fx:id="txtTelefone" layoutX="209.0" layoutY="420.0" onKeyReleased="#txtTelefoneKeyReleased" prefHeight="25.0" prefWidth="307.0" />
       <Label layoutX="89.0" layoutY="390.0" prefHeight="17.0" prefWidth="125.0" text="CEP:" />
       <Label layoutX="89.0" layoutY="359.0" prefHeight="17.0" prefWidth="125.0" text="Complemento:" />
       <Label layoutX="89.0" layoutY="327.0" prefHeight="17.0" prefWidth="125.0" text="Número:" />
@@ -27,10 +30,7 @@
       <Label layoutX="89.0" layoutY="262.0" prefHeight="17.0" prefWidth="125.0" text="Bairro:" />
       <Label layoutX="89.0" layoutY="229.0" prefHeight="17.0" prefWidth="125.0" text="Cidade:" />
       <Label layoutX="86.0" layoutY="424.0" prefHeight="17.0" prefWidth="125.0" text="Telefone:" />
-      <TextField fx:id="txtNomeCliente" layoutX="209.0" layoutY="128.0" prefHeight="25.0" prefWidth="307.0" />
       <Label layoutX="89.0" layoutY="132.0" prefHeight="17.0" prefWidth="125.0" text="Nome do Cliente:" />
-      <TextField fx:id="txtCep" layoutX="209.0" layoutY="386.0" onKeyReleased="#txtCepKeyReleased" prefHeight="25.0" prefWidth="307.0" />
-      <TextField fx:id="txtTelefone" layoutX="209.0" layoutY="420.0" onKeyReleased="#txtTelefoneKeyReleased" prefHeight="25.0" prefWidth="307.0" />
       <Label layoutX="86.0" layoutY="164.0" text="CPF:" />
       <Label layoutX="89.0" layoutY="196.0" text="UF:" />
       <Button fx:id="btnBuscar" layoutX="90.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickBuscar" text="BUSCAR" />

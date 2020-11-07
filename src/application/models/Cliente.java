@@ -11,11 +11,11 @@ public class Cliente {
 	public String bairro_cli;
 	public String cidade_cli;
 	public String estado_cli;
-	public int cep_cli;
+	public String cep_cli;
 	public String telefone_cli;
 	
 	public Cliente(int id_cli, String nome_cli, String cpf_cnpj_cli, String rua_cli, int numero_cli,
-			String complemento_cli, String bairro_cli, String cidade_cli, String estado_cli, int cep_cli,
+			String complemento_cli, String bairro_cli, String cidade_cli, String estado_cli, String cep_cli,
 			String telefone_cli) {
 		this.id_cli = id_cli;
 		this.nome_cli = nome_cli;
@@ -102,11 +102,11 @@ public class Cliente {
 		this.estado_cli = estado_cli;
 	}
 
-	public int getCep_cli() {
+	public String getCep_cli() {
 		return cep_cli;
 	}
 
-	public void setCep_cli(int cep_cli) {
+	public void setCep_cli(String cep_cli) {
 		this.cep_cli = cep_cli;
 	}
 

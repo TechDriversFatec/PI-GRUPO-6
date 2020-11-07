@@ -1,5 +1,7 @@
 package application.controllers;
 
+import application.models.Cliente;
+import application.models.dao.ClienteSQL;
 import application.util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -76,9 +78,24 @@ public class ClienteController {
     	tff.setTf(txtCep);
     	tff.formatter();
     }
+    
 
     @FXML
     void executarClickCadastrar(ActionEvent event) {
+    	String nome = txtNomeCliente.getText();
+    	String cpf_cnpj = txtCpf.getText();
+    	String rua = txtRua.getText();
+    	int numero = Integer.parseInt(txtNumero.getText());
+    	String complemento = txtComplemento.getText();
+    	String bairro = txtBairro.getText();
+    	String cidade = txtCidade.getText();
+    	String estado = txtUf.getText();
+    	String cep = txtCep.getText();
+    	String telefone = txtTelefone.getText();
+    
+    	Cliente cliente = new Cliente(0, nome, cpf_cnpj, rua, numero, complemento, bairro, cidade, estado, cep, telefone);
+    	ClienteSQL clienteSQL = new ClienteSQL();
+    	clienteSQL.create(cliente);
 
     }
 

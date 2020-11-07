@@ -1,14 +1,20 @@
 package application.controllers;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import application.models.Usuario;
+import application.models.dao.UsuarioSQL;
 import application.util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 
-public class UsuarioController {
+public class UsuarioController implements Initializable {
 
     @FXML
     private TextField txtLogin;
@@ -63,7 +69,16 @@ public class UsuarioController {
 
     @FXML
     void executarClickCadastrar(ActionEvent event) {
+    	String nome = txtNomeUsuario.getText();
+    	String telefone = txtTelefone.getText();
+    	String login = txtLogin.getText();
+    	String numMatricula = txtNumMatricula.getText();
+    	String senha = txtSenha.getText();
+    	String cpf = txtCpf.getText();
 
+    	Usuario usuario = new Usuario(0, nome, cpf, login, senha, numMatricula, telefone);
+    	UsuarioSQL usuarioSQL = new UsuarioSQL();
+    	usuarioSQL.create(usuario);
     }
 
     @FXML
@@ -86,5 +101,11 @@ public class UsuarioController {
     	txtCpf.setText("");
     	
     }
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+		btnEditar.setDisable(true);
+	}
 
 }

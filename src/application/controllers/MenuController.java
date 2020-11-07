@@ -33,7 +33,7 @@ public class MenuController {
 		rootLayout = (BorderPane) btnCadastroUsuario.getScene().getRoot();
 		
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MenuController.class.getResource("../CadastroUsuario.fxml"));
+        loader.setLocation(MenuController.class.getResource("../views/CadastroUsuario.fxml"));
         AnchorPane cadastroUsuario = (AnchorPane) loader.load();
 
         rootLayout.setCenter(cadastroUsuario);
@@ -44,7 +44,7 @@ public class MenuController {
 		rootLayout = (BorderPane) btnCadastroCliente.getScene().getRoot();
 		
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MenuController.class.getResource("../CadastroCliente.fxml"));
+        loader.setLocation(MenuController.class.getResource("../views/CadastroCliente.fxml"));
         AnchorPane cadastroCliente = (AnchorPane) loader.load();
 
         rootLayout.setCenter(cadastroCliente);
@@ -55,7 +55,7 @@ public class MenuController {
 		rootLayout = (BorderPane) btnContaLuz.getScene().getRoot();
 		
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MenuController.class.getResource("../ContaLuz.fxml"));
+        loader.setLocation(MenuController.class.getResource("../views/ContaLuz.fxml"));
         BorderPane contaLuz = loader.load();
 
         rootLayout.setCenter(contaLuz);
@@ -66,7 +66,7 @@ public class MenuController {
 		rootLayout = (BorderPane) btnContaAgua.getScene().getRoot();
 		
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MenuController.class.getResource("../ContaAgua.fxml"));
+        loader.setLocation(MenuController.class.getResource("../views/ContaAgua.fxml"));
         BorderPane contaAgua = loader.load();
 
         rootLayout.setCenter(contaAgua);
@@ -78,7 +78,7 @@ public class MenuController {
 		rootLayout = (BorderPane) btnContaGas.getScene().getRoot();
 		
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MenuController.class.getResource("../ContaGas.fxml"));
+        loader.setLocation(MenuController.class.getResource("../views/ContaGas.fxml"));
         BorderPane contaGas = loader.load();
 
         rootLayout.setCenter(contaGas);

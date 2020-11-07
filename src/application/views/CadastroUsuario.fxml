@@ -9,7 +9,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.UsuarioController">
    <children>
       <TextField fx:id="txtNomeUsuario" layoutX="210.0" layoutY="137.0" prefHeight="25.0" prefWidth="307.0" />
-      <TextField fx:id="txtTelefone" layoutX="210.0" layoutY="185.0" onKeyReleased="#txtTelefoneKeyReleased" prefHeight="25.0" prefWidth="307.0" promptText="Teste" />
+      <TextField fx:id="txtTelefone" layoutX="210.0" layoutY="185.0" onKeyReleased="#txtTelefoneKeyReleased" prefHeight="25.0" prefWidth="307.0" />
       <TextField fx:id="txtLogin" layoutX="212.0" layoutY="232.0" prefHeight="25.0" prefWidth="307.0" />
       <TextField fx:id="txtNumMatricula" layoutX="210.0" layoutY="283.0" prefHeight="25.0" prefWidth="307.0" />
       <TextField fx:id="txtSenha" layoutX="210.0" layoutY="332.0" prefHeight="25.0" prefWidth="307.0" />
