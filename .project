@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>PI-GRUPO-6</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+=======
 	<name>PI</name>
 	<comment></comment>
 	<projects>
@@ -25,4 +35,5 @@
 			</matcher>
 		</filter>
 	</filteredResources>
+>>>>>>> branch 'master' of https://github.com/rangelandrade/PI-GRUPO-6.git
 </projectDescription>
