@@ -91,5 +91,5 @@ ________________________________________________________________________________
 
  
 
-**Extração de dados  do cadastro do cliente para a conta de luz usando outro botão de busca para completar os campos referentes ao cadastro do cientiste na conta de luz.**
+**Extração de dados  do cadastro do cliente para a conta de luz usando outro botão de busca para completar os campos referentes ao cadastro do cliente na conta de luz.**
 
