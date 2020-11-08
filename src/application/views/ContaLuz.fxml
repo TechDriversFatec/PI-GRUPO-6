@@ -21,14 +21,15 @@
                   </VBox>
                   <VBox prefHeight="63.0" prefWidth="150.0">
                      <children>
-                        <Label text="Nome do Titular:" />
+                        <Label text="Cliente" />
                         <TextField fx:id="txtNomeTitular" />
+                        <Button fx:id="btnBuscarCliente" mnemonicParsing="false" onAction="#clickBuscarCliente" text="Buscar" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="UF:" />
-                        <TextField fx:id="txtUf" />
+                        <TextField fx:id="txtUf" disable="true" />
                      </children>
                   </VBox>
                </children>
@@ -38,19 +39,19 @@
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Cidade:" />
-                        <TextField fx:id="txtCidade" />
+                        <TextField fx:id="txtCidade" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Bairro:" />
-                        <TextField fx:id="txtBairro" />
+                        <TextField fx:id="txtBairro" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Rua:" />
-                        <TextField fx:id="txtRua" />
+                        <TextField fx:id="txtRua" disable="true" />
                      </children>
                   </VBox>
                </children>
@@ -60,19 +61,19 @@
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Número:" />
-                        <TextField fx:id="txtNumero" />
+                        <TextField fx:id="txtNumero" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Complemento:" />
-                        <TextField fx:id="txtComplemento" />
+                        <TextField fx:id="txtComplemento" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="CEP:" />
-                        <TextField fx:id="txtCep" onKeyReleased="#txtCepKeyReleased" />
+                        <TextField fx:id="txtCep" disable="true" onKeyReleased="#txtCepKeyReleased" />
                      </children>
                   </VBox>
                </children>

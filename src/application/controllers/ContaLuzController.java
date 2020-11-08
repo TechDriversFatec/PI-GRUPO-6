@@ -1,5 +1,8 @@
 package application.controllers;
 
+import application.models.Cliente;
+import application.models.dao.ClienteSQL;
+import application.models.dao.ContaLuzSQL;
 import application.util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -140,4 +143,17 @@ public class ContaLuzController {
     	
     }
 
+    @FXML
+    void clickBuscarCliente(ActionEvent event) {
+    	ClienteSQL clienteSQL = new ClienteSQL();
+    	Cliente cliente = clienteSQL.buscarClientePeloNome(txtNomeTitular.getText());
+    	txtNomeTitular.setText(cliente.nome_cli);
+    	txtCep.setText(cliente.getCep_cli());
+    	txtUf.setText(cliente.estado_cli);
+    	txtCidade.setText(cliente.cidade_cli);
+    	txtComplemento.setText(cliente.complemento_cli);
+    	txtBairro.setText(cliente.bairro_cli);
+    	txtRua.setText(cliente.rua_cli);
+    	txtNumero.setText(String.valueOf(cliente.numero_cli));
+    }
 }

@@ -1,9 +1,13 @@
 package application.models.dao;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import application.models.Cliente;
+import application.models.Usuario;
 
 public class ClienteSQL extends ConnectionBase {
 	
@@ -36,6 +40,43 @@ public class ClienteSQL extends ConnectionBase {
 		}finally {
 			close();
 		}
+	}
+	
+	
+	public Cliente buscarClientePeloNome(String nome) {
+
+		open();
+
+		ArrayList<Cliente> result = new ArrayList<>();
+
+		try {
+			PreparedStatement stm = conexao.prepareStatement("SELECT * FROM cliente WHERE nome_cli LIKE '" + nome + "%'");
+//			stm.setString(0, nome);
+			ResultSet rs = stm.executeQuery();
+
+			while (rs.next()) {
+
+				Cliente cliente = new Cliente(rs.getInt(1),
+						rs.getString(2), 
+						rs.getString(3), 
+						rs.getString(4), 
+						rs.getInt(5),
+						rs.getString(6), 
+						rs.getString(7), 
+						rs.getString(8), 
+						rs.getString(9), 
+						rs.getString(10), 
+						rs.getString(11)
+				);
+				result.add(cliente);
+			}
+		} catch (SQLException e) {
+			System.out.println("Exception método all");
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return result.get(0);
 	}
 		
 
