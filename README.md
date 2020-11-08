@@ -47,3 +47,45 @@ ________________________________________________________________________________
 
 **Vídeo:** https://drive.google.com/file/d/1OuOShNbeQQrYNLkN5BvrwVTcF5X3buaX/view
 
+# SPRINT 2
+
+ 
+
+**Ferramentas utilizadas:** 
+- Eclipse 
+- Java Fx scene builder 
+- MySQL workbench
+
+ 
+
+**Criação das seguintes telas:**
+- Menu 
+- Cadastro usuário 
+- Cadastro cliente
+- Conta água
+- Conta gás 
+- Conta luz
+
+ 
+
+**Conexão  com o banco de dados e criação do botão  cadastrar para as seguintes telas:**
+- Cadastro usuário 
+- Cadastro cliente
+- Conta de luz
+
+ 
+
+**Criação do botão limpar para todas as telas criadas**
+
+ 
+
+**Implementação de máscaras para os seguintes itens:**
+- Cpf
+- Cep
+- Telefone 
+- Data
+
+ 
+
+**Extração de dados  do cadastro do cliente para a conta de luz usando outro botão de busca para completar os campos referentes ao cadastro do cientiste na conta de luz.**
+
