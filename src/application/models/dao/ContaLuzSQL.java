@@ -45,34 +45,36 @@ public class ContaLuzSQL extends ConnectionBase {
 
 		try {
 			PreparedStatement stm = conexao.prepareStatement(
-					"INSERT INTO conta_luz (id_contaluz,id_cliente_contaluz,cod_identif_contaluz, grupo_subgrupo_contaluz,tpfornecimento_contaluz,modtarifaria_contluz,rotleitura_contluz, odfiscal_contaluz, classe_subclasse_contaluz, tensaonominal_contaluz, medidor_contaluz, id_clienteconsumo_contaluz, valortotal_contaluz, numeroinstalacao_contaluz, consumo_contluz, datavenc_contaluz, contames_contaluz, bandtarifarias, emissao_contaluz, leituraanterior_contaluz, leituraatual_contaluz, prevproxleit_contaluz, diasfatura_contaluz, leit_ant_contaluz, leit_atual_contaluz, const_mult_contaluz)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,);");
+					"INSERT INTO conta (id_conta,id_cliente_conta,cod_identif_conta, grupo_subgrupo_conta,tpfornecimento_conta,modtarifaria_conta,rotleitura_conta, codfiscal_conta, classe_subclasse_conta, tensaonominal_conta, medidor_conta, id_clienteconsumo_conta, valortotal_conta, numeroinstalacao_conta, consumo_conta, datavenc_conta, contames_conta, bandtarifarias, emissao_conta, leituraanterior_conta, leituraatual_conta, prevproxleit_conta, diasfatura_conta, leit_ant_conta, leit_atual_conta, const_mult_conta)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
 
-			stm.setInt(4, luz.getCod_identif_contaluz());
-			stm.setString(5, luz.getGrupo_subgrupo_contaluz());
-			stm.setString(6, luz.getTpfornecimento_contaluz());
-			stm.setString(7, luz.getModtarifaria_contluz());
-			stm.setString(8, luz.getRotleitura_contluz());
-			stm.setString(9, luz.getCodfiscal_contaluz());
-			stm.setString(10, luz.getClasse_subclasse_contaluz());
-			stm.setString(11, luz.getTensaonominal_contaluz());
-			stm.setInt(12, luz.getMedidor_contaluz());
-			stm.setInt(13, luz.getId_clienteconsumo_contaluz());
+			stm.setInt(1, luz.getId_contaluz());
+			stm.setInt(2, luz.getId_cliente_contaluz());
+			stm.setInt(3, luz.getCod_identif_contaluz());
+			stm.setString(4, luz.getGrupo_subgrupo_contaluz());
+			stm.setString(5, luz.getTpfornecimento_contaluz());
+			stm.setString(6, luz.getModtarifaria_contluz());
+			stm.setString(7, luz.getRotleitura_contluz());
+			stm.setString(8, luz.getCodfiscal_contaluz());
+			stm.setString(9, luz.getClasse_subclasse_contaluz());
+			stm.setString(10, luz.getTensaonominal_contaluz());
+			stm.setInt(11, luz.getMedidor_contaluz());
+			stm.setInt(12, luz.getId_clienteconsumo_contaluz());
 
-			stm.setFloat(14, luz.getValortotal_contaluz());
-			stm.setInt(15, luz.getNumeroinstalacao_contaluz());
-			stm.setInt(16, luz.getConsumo_contluz());
-			stm.setDate(17, (java.sql.Date) luz.getDatavenc_contaluz());
-			stm.setString(18, luz.getContames_contaluz());
-			stm.setString(19, luz.getBandtarifarias());
-			stm.setDate(20, (java.sql.Date) luz.getEmissao_contaluz());
-			stm.setDate(21, (java.sql.Date) luz.getLeituraanterior_contaluz());
-			stm.setDate(22, (java.sql.Date) luz.getLeituraatual_contaluz());
-			stm.setDate(23, (java.sql.Date) luz.getLeituraatual_contaluz());
-			stm.setInt(24, luz.getDiasfatura_contaluz());
-
-			stm.setFloat(25, luz.getLeit_ant_contaluz());
-			stm.setFloat(26, luz.getLeit_atual_contaluz());
-			stm.setFloat(27, luz.getConst_mult_contaluz());
+			stm.setFloat(13, luz.getValortotal_contaluz());
+			stm.setInt(14, luz.getNumeroinstalacao_contaluz());
+			stm.setInt(15, luz.getConsumo_contluz());
+			stm.setDate(16, (java.sql.Date) luz.getDatavenc_contaluz());
+			stm.setString(17, luz.getContames_contaluz());
+			stm.setString(18, luz.getBandtarifarias());
+			stm.setDate(19, (java.sql.Date) luz.getEmissao_contaluz());
+			stm.setDate(20, (java.sql.Date) luz.getLeituraanterior_contaluz());
+			stm.setDate(21, (java.sql.Date) luz.getLeituraatual_contaluz());
+			stm.setDate(22, (java.sql.Date) luz.getPrevproxleit_contaluz());
+			stm.setInt(23, luz.getDiasfatura_contaluz());
+			
+			stm.setFloat(24, luz.getLeit_ant_contaluz());
+			stm.setFloat(25, luz.getLeit_atual_contaluz());
+			stm.setFloat(26, luz.getConst_mult_contaluz());
 
 			stm.executeUpdate();
 		} catch (SQLException e) {

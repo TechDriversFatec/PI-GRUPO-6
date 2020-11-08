@@ -1,6 +1,9 @@
 package application.controllers;
 
+import java.sql.Date;
+
 import application.models.Cliente;
+import application.models.ContaLuz;
 import application.models.dao.ClienteSQL;
 import application.models.dao.ContaLuzSQL;
 import application.util.TextFieldFormatter;
@@ -141,6 +144,48 @@ public class ContaLuzController {
     @FXML
     void clickEditar(ActionEvent event) {
     	
+    }
+    
+    @FXML
+    void clickCadastrar(ActionEvent event) {
+    	int cod_identif_contaluz = Integer.parseInt(txtCodIdentificacaoConta.getText());
+    	String grupo_subgrupo_contaluz = txtGrupoSubgrupo.getText();
+    	String tpfornecimento_contaluz = txtTpFornecimento.getText();
+    	String modtarifaria_contluz = txtModTarifaria.getText();
+    	String rotleitura_contluz = "";
+    	String codfiscal_contaluz = "";
+    	String classe_subclasse_contaluz = txtClasseSubclasse.getText();
+    	String tensaonominal_contaluz = txtTensaoNominal.getText();
+    	int medidor_contaluz = Integer.parseInt(txtMedidor.getText());
+    	float valortotal_contaluz = Float.parseFloat(txtTotalPagar.getText());
+    	int numeroinstalacao_contaluz = Integer.parseInt(txtNumeroIdentificacao.getText());
+    	int consumo_contluz = Integer.parseInt(txtConsumo.getText());
+    	Date datavenc_contaluz = Date.valueOf(txtDataVencimento.getValue());
+    	String contames_contaluz = txtContaMes.getText();
+    	String bandtarifarias = txtBandeiraTarifaria.getText();
+    	Date emissao_contaluz = null;
+    	Date leituraanterior_contaluz = Date.valueOf(txtDataLeituraAnterior.getValue());
+    	Date leituraatual_contaluz = Date.valueOf(txtDataLeituraAtual.getValue());
+    	Date prevproxleit_contaluz = null;
+    	int diasfatura_contaluz = Integer.parseInt(txtDiasFatura.getText());
+    	String avisos_contaluz = "";
+    	float leit_ant_contaluz = Float.parseFloat(txtValorLeituraAnterior.getText());
+    	float leit_atual_contaluz = Float.parseFloat(txtValorLeituraAtual.getText());
+    	float const_mult_contaluz = 0;
+    	
+    	
+    	
+    	ContaLuz contaluz = new ContaLuz(0, 1, cod_identif_contaluz, grupo_subgrupo_contaluz,
+    			tpfornecimento_contaluz, modtarifaria_contluz, rotleitura_contluz,
+    			codfiscal_contaluz, classe_subclasse_contaluz, tensaonominal_contaluz,
+    			medidor_contaluz, 1, valortotal_contaluz,
+    			numeroinstalacao_contaluz, consumo_contluz, datavenc_contaluz, contames_contaluz,
+    			bandtarifarias, emissao_contaluz, leituraanterior_contaluz, leituraatual_contaluz,
+    			prevproxleit_contaluz, diasfatura_contaluz, avisos_contaluz, leit_ant_contaluz,
+    			leit_atual_contaluz, const_mult_contaluz);
+    	ContaLuzSQL contaluzSQL = new ContaLuzSQL();
+    	contaluzSQL.create(contaluz);
+
     }
 
     @FXML
