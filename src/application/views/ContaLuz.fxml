@@ -207,7 +207,7 @@
                <children>
                   <Button fx:id="botaoLimparCamposLuz" mnemonicParsing="false" onAction="#clickLimpar" text="LIMPAR" />
                   <Button mnemonicParsing="false" text="EDITAR" />
-                  <Button mnemonicParsing="false" text="CADASTRAR" />
+                  <Button fx:id="botaoCadastrarCamposLuz" mnemonicParsing="false" onAction="#clickCadastrar" text="CADASTRAR" />
                </children>
                <VBox.margin>
                   <Insets bottom="15.0" />

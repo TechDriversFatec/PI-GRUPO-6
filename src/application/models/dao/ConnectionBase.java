@@ -11,13 +11,14 @@ public class ConnectionBase {
 	public Connection open() {
 		
 		//"jdbc:mysql://localhost:3306/pi_grupo6", "root", "admin"
+		//"jdbc:mysql://localhost:3306/pi_grupo6", "root", "root"
 		
 		try {
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("Driver Ok");
 			
-			conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/pi_grupo6", "root", "root");
+			conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/pi_grupo6", "PI_Grupo6", "123");
 			
 			System.out.println("conexão ok");
 			return conexao;
