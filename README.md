@@ -47,6 +47,7 @@ ________________________________________________________________________________
 
 **Vídeo:** https://drive.google.com/file/d/1OuOShNbeQQrYNLkN5BvrwVTcF5X3buaX/view
 
+_________________________________________________________________________________________________
 # SPRINT 2
 
  
@@ -54,7 +55,10 @@ ________________________________________________________________________________
 **Ferramentas utilizadas:** 
 - Eclipse 
 - Java Fx scene builder 
-- MySQL workbench
+-	MYSQL Workbench 8.0.( https://dev.mysql.com/downloads/workbench/)
+-	MYSQL SERVER 8.0 (https://www.mysql.com/downloads/)
+-	JAVA versão 11( https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+-	Sistema operacional Windows 10 ou superior.
 
  
 
