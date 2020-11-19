@@ -14,6 +14,8 @@ public class Cliente {
 	public String cep_cli;
 	public String telefone_cli;
 	
+	public Cliente() {}
+	
 	public Cliente(int id_cli, String nome_cli, String cpf_cnpj_cli, String rua_cli, int numero_cli,
 			String complemento_cli, String bairro_cli, String cidade_cli, String estado_cli, String cep_cli,
 			String telefone_cli) {

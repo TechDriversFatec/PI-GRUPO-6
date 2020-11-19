@@ -43,6 +43,26 @@ public class ClienteSQL extends ConnectionBase {
 	}
 	
 	
+	public Cliente buscarClientePorId(int idCliente) {
+		open();
+		Cliente cliente = new Cliente();
+		
+		try {
+			PreparedStatement stm = conexao.prepareStatement("SELECT nome_cli FROM Cliente WHERE id_cli='" + idCliente + "'");
+			ResultSet rs = stm.executeQuery();
+
+			if (rs != null && rs.next()) {
+				cliente.setNome_cli(rs.getString(1));	
+			}
+			
+		} catch(SQLException e) {
+			System.out.println("Erro ao buscar cliente por Id");
+			e.printStackTrace();
+		}
+		
+		return cliente;
+	}
+	
 	public Cliente buscarClientePeloNome(String nome) {
 
 		open();
