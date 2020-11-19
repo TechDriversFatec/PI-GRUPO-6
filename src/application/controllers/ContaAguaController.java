@@ -1,14 +1,27 @@
 package application.controllers;
 
+import java.net.URL;
+import java.sql.Date;
+import java.util.ResourceBundle;
+
+import application.models.Cliente;
+import application.models.ContaAgua;
+import application.models.Imovel;
+import application.models.dao.ClienteSQL;
+import application.models.dao.ContaAguaSQL;
+import application.models.dao.ImovelSQL;
 import application.util.TextFieldFormatter;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
-public class ContaAguaController {
+public class ContaAguaController implements Initializable {
 
 	@FXML
     private TextField txtEsgoto;
@@ -120,5 +133,76 @@ public class ContaAguaController {
     	txtDataVencimento.setValue(null);
     	txtTotalPagar.setText("");
     }
+	@FXML
+    void clickEditar(ActionEvent event) {
+    	
+    }
+    
+    @FXML
+    void clickCadastrar(ActionEvent event) {
+    	int rgi = Integer.parseInt(txtRgi.getText());
+    	int codigoCliente = Integer.parseInt(txtCodigoCliente.getText());
+    	String tipoLigacao = txtTipoLigacao.getText();
+    	String hidrometro = txtHidrometro.getText();
+    	String tipoFaturamento = txtTipoFaturamento.getText();
+    	String periodoConsumo = txtPeriodoConsumo.getText();
+    	String agua = txtAgua.getText();
+    	String esgoto = txtEsgoto.getText();
+    	String consumo = txtConsumo.getText();
+    	float valorLeituraAtual = Float.parseFloat(txtValorLeituraAtual.getText());
+    	float valorLeituraAnterior = Float.parseFloat(txtValorLeituraAnterior.getText());
+    	Date dataLeituraAtual = Date.valueOf(txtDataLeituraAtual.getValue());
+    	Date dataLeituraAnterior = Date.valueOf(txtDataLeituraAnterior.getValue());
+    	Date dataVencimento = Date.valueOf(txtDataVencimento.getValue());
+    	float totalPagar = Float.parseFloat(txtTotalPagar.getText());
+    	
+    	
+    	ContaAgua contaAgua = new ContaAgua(0, 1, rgi, codigoCliente, tipoLigacao, hidrometro, tipoFaturamento,
+    			periodoConsumo, agua, esgoto, consumo, valorLeituraAtual, valorLeituraAnterior, dataLeituraAtual,
+    			dataLeituraAnterior, dataVencimento, totalPagar);
+    	ContaAguaSQL contaAguaSQL = new ContaAguaSQL();
+    	contaAguaSQL.create(contaAgua);
 
+    }
+
+    @FXML
+    void clickBuscarImovel(ActionEvent event) {
+    	buscarImovel();
+    }
+    
+    public void buscarImovel() {
+    	System.out.println("nr de identificação: " + txtRgi.getText() + "\n");
+    	if (!"".equals(txtRgi.getText())) {
+    		ImovelSQL imovelSQL = new ImovelSQL();
+    		ClienteSQL clienteSQL = new ClienteSQL();
+    		
+    		int codIdentificacao = Integer.parseInt(txtRgi.getText());
+    		Imovel imovel = imovelSQL.buscarImovelPeloCodIdentificacao(codIdentificacao);
+    		Cliente cliente = clienteSQL.buscarClientePorId(imovel.getIdCliente());
+    		txtNomeTitular.setText(cliente.getNome_cli());
+    		txtCep.setText(imovel.getCepImovel());
+    		txtUf.setText(imovel.getUfImovel());
+    		txtCidade.setText(imovel.getCidadeImovel());
+    		txtComplemento.setText(imovel.getComplementoImovel());
+    		txtBairro.setText(imovel.getBairroImovel());
+    		txtRua.setText(imovel.ruaImovel);
+    		txtNumero.setText(String.valueOf(imovel.getNumImovel()));
+    	}
+    }
+
+    @Override
+	public void initialize(URL location, ResourceBundle resources) {
+		txtRgi.focusedProperty().addListener(new ChangeListener<Boolean>()
+		{
+		    @Override
+		    public void changed(ObservableValue<? extends Boolean> arg0, Boolean oldPropertyValue, Boolean newPropertyValue)
+		    {
+		        if (newPropertyValue) {
+		            System.out.println("clicou no campo");
+		        } else {
+		        	buscarImovel();
+		        }
+		    }
+		});		
+	}
 }

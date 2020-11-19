@@ -22,8 +22,7 @@
                   <VBox prefHeight="63.0" prefWidth="150.0">
                      <children>
                         <Label text="Cliente" />
-                        <TextField fx:id="txtNomeTitular" />
-                        <Button fx:id="btnBuscarCliente" mnemonicParsing="false" onAction="#clickBuscarCliente" text="Buscar" />
+                        <TextField fx:id="txtNomeTitular" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
@@ -223,7 +222,7 @@
    <top>
       <Label text="Cadastro de Conta de Luz" BorderPane.alignment="CENTER">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font size="24.0" />
          </font>
          <BorderPane.margin>
             <Insets bottom="15.0" top="30.0" />

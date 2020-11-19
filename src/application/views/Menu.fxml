@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.MenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.MenuController">
    <top>
       <HBox alignment="CENTER" spacing="27.0" BorderPane.alignment="CENTER">
          <children>
@@ -15,6 +15,7 @@
             <Button fx:id="btnContaAgua" mnemonicParsing="false" onAction="#clickContaAgua" text="Conta Água" />
             <Button fx:id="btnContaGas" mnemonicParsing="false" onAction="#clickContaGas" text="Conta Gás" />
             <Button fx:id="btnContaLuz" mnemonicParsing="false" onAction="#clickContaLuz" text="Conta Luz" />
+            <Button fx:id="btnCadastroImovel" mnemonicParsing="false" onAction="#clickCadastroImovel" text="Cadastro Imóvel" />
          </children>
          <opaqueInsets>
             <Insets />

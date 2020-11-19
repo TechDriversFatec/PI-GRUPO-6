@@ -18,7 +18,7 @@ public class ConnectionBase {
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("Driver Ok");
 			
-			conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/pi_grupo6", "PI_Grupo6", "123");
+			conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/pi_grupo6", "root", "root");
 			
 			System.out.println("conexão ok");
 			return conexao;

@@ -12,24 +12,29 @@ import java.sql.ResultSet;
 
 public class UsuarioSQL extends ConnectionBase {
 
-	/*
-	 * public UsuarioSQL() {
-	 * 
-	 * open();
-	 * 
-	 * try { PreparedStatement stm =
-	 * conexao.prepareStatement("CREATE TABLE IF NOT EXISTS usuario ("+
-	 * "id_user int PRIMARY KEY NOT NULL AUTO_INCREMENT,"+ "nome_user VARCHAR(40),"
-	 * + "cpf_user VARCHAR(11)," + "login_user VARCHAR(20)," +
-	 * "senha_user VARCHAR(20)," + "tipo_user VARCHAR(20);"); stm.executeUpdate();
-	 * 
-	 * } catch (SQLException e) { System.out.println("EXCEPTION"); // TODO
-	 * Auto-generated catch block e.printStackTrace(); }finally {
-	 * 
-	 * close(); }
-	 * 
-	 * }
-	 */
+	
+	  public UsuarioSQL() {
+	 
+	  open();
+	  
+	  try { 
+		  PreparedStatement stm =
+	  conexao.prepareStatement("CREATE TABLE IF NOT EXISTS usuario ("
+		  +"id_user int PRIMARY KEY NOT NULL AUTO_INCREMENT,"
+		  + "nome_user VARCHAR(40)," 
+		  + "cpf_user VARCHAR(11)," 
+		  + "login_user VARCHAR(20)," 
+		  +"senha_user VARCHAR(20)," 
+		  + "tipo_user VARCHAR(20);"); 
+		  stm.executeUpdate();
+	  
+		stm.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+	}
 
 	public void create(Usuario user) {
 

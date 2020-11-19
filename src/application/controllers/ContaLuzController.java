@@ -1,20 +1,27 @@
 package application.controllers;
 
+import java.net.URL;
 import java.sql.Date;
+import java.util.ResourceBundle;
 
 import application.models.Cliente;
 import application.models.ContaLuz;
+import application.models.Imovel;
 import application.models.dao.ClienteSQL;
 import application.models.dao.ContaLuzSQL;
+import application.models.dao.ImovelSQL;
 import application.util.TextFieldFormatter;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
-public class ContaLuzController {
+public class ContaLuzController implements Initializable {
 
     @FXML
     private TextField txtNumeroIdentificacao;
@@ -174,7 +181,6 @@ public class ContaLuzController {
     	float const_mult_contaluz = 0;
     	
     	
-    	
     	ContaLuz contaluz = new ContaLuz(0, 1, cod_identif_contaluz, grupo_subgrupo_contaluz,
     			tpfornecimento_contaluz, modtarifaria_contluz, rotleitura_contluz,
     			codfiscal_contaluz, classe_subclasse_contaluz, tensaonominal_contaluz,
@@ -189,16 +195,44 @@ public class ContaLuzController {
     }
 
     @FXML
-    void clickBuscarCliente(ActionEvent event) {
-    	ClienteSQL clienteSQL = new ClienteSQL();
-    	Cliente cliente = clienteSQL.buscarClientePeloNome(txtNomeTitular.getText());
-    	txtNomeTitular.setText(cliente.nome_cli);
-    	txtCep.setText(cliente.getCep_cli());
-    	txtUf.setText(cliente.estado_cli);
-    	txtCidade.setText(cliente.cidade_cli);
-    	txtComplemento.setText(cliente.complemento_cli);
-    	txtBairro.setText(cliente.bairro_cli);
-    	txtRua.setText(cliente.rua_cli);
-    	txtNumero.setText(String.valueOf(cliente.numero_cli));
+    void clickBuscarImovel(ActionEvent event) {
+    	buscarImovel();
     }
+    
+    public void buscarImovel() {
+    	System.out.println("nr de identificação: " + txtNumeroIdentificacao.getText() + "\n");
+    	if (!"".equals(txtNumeroIdentificacao.getText())) {
+    		ImovelSQL imovelSQL = new ImovelSQL();
+    		ClienteSQL clienteSQL = new ClienteSQL();
+    		
+    		int codIdentificacao = Integer.parseInt(txtNumeroIdentificacao.getText());
+    		Imovel imovel = imovelSQL.buscarImovelPeloCodIdentificacao(codIdentificacao);
+    		Cliente cliente = clienteSQL.buscarClientePorId(imovel.getIdCliente());
+    		txtNomeTitular.setText(cliente.getNome_cli());
+    		txtCep.setText(imovel.getCepImovel());
+    		txtUf.setText(imovel.getUfImovel());
+    		txtCidade.setText(imovel.getCidadeImovel());
+    		txtComplemento.setText(imovel.getComplementoImovel());
+    		txtBairro.setText(imovel.getBairroImovel());
+    		txtRua.setText(imovel.ruaImovel);
+    		txtNumero.setText(String.valueOf(imovel.getNumImovel()));
+    	}
+    }
+
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		txtNumeroIdentificacao.focusedProperty().addListener(new ChangeListener<Boolean>()
+		{
+		    @Override
+		    public void changed(ObservableValue<? extends Boolean> arg0, Boolean oldPropertyValue, Boolean newPropertyValue)
+		    {
+		        if (newPropertyValue) {
+		            System.out.println("clicou no campo");
+		        } else {
+		        	buscarImovel();
+		        }
+		    }
+		});		
+	}
 }

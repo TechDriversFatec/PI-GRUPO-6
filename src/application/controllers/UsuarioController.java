@@ -105,7 +105,7 @@ public class UsuarioController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-		btnEditar.setDisable(true);
+//		btnEditar.setDisable(true);
 	}
 
 }

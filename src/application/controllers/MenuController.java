@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -27,6 +28,9 @@ public class MenuController {
 	
 	@FXML
 	private Button btnContaGas;
+
+	@FXML
+	private Button btnCadastroImovel;
 	
 	@FXML
 	private void clickCadastroUsuario(ActionEvent evento) throws IOException {
@@ -83,5 +87,15 @@ public class MenuController {
 
         rootLayout.setCenter(contaGas);
 
+	}
+	@FXML
+	private void clickCadastroImovel(ActionEvent evento) throws IOException {
+		rootLayout = (BorderPane) btnCadastroImovel.getScene().getRoot();
+		
+		FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MenuController.class.getResource("../views/CadastroImovel.fxml"));
+        BorderPane cadastroImovel = (BorderPane) loader.load();
+
+        rootLayout.setCenter(cadastroImovel);
 	}
 }

@@ -8,7 +8,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="634.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ClienteController">
    <children>
-      <Button fx:id="btnCadastrar" layoutX="211.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickCadastrar" text="CADASTRAR" />
+      <Button fx:id="btnCadastrar" layoutX="211.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickCadastrar" text="CADASTRAR">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
       <Label layoutX="213.0" layoutY="52.0" text="Cadastro Cliente">
          <font>
             <Font size="24.0" />
@@ -33,8 +36,18 @@
       <Label layoutX="89.0" layoutY="132.0" prefHeight="17.0" prefWidth="125.0" text="Nome do Cliente:" />
       <Label layoutX="86.0" layoutY="164.0" text="CPF:" />
       <Label layoutX="89.0" layoutY="196.0" text="UF:" />
-      <Button fx:id="btnBuscar" layoutX="90.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickBuscar" text="BUSCAR" />
-      <Button fx:id="btnLimpar" layoutX="469.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickLimpar" text="LIMPAR" />
-      <Button fx:id="btnEditar" layoutX="348.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickEditar" text="EDITAR" />
+      <Button fx:id="btnBuscar" layoutX="90.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickBuscar" text="BUSCAR">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Button fx:id="btnLimpar" layoutX="469.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickLimpar" text="LIMPAR">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="348.0" layoutY="535.0" mnemonicParsing="false" onAction="#executarClickEditar" text="EDITAR">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

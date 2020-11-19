@@ -22,13 +22,13 @@
                   <VBox prefHeight="63.0" prefWidth="150.0">
                      <children>
                         <Label text="Nome titular:" />
-                        <TextField fx:id="txtNomeTitular" />
+                        <TextField fx:id="txtNomeTitular" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="UF:" />
-                        <TextField fx:id="txtUf" />
+                        <TextField fx:id="txtUf" disable="true" />
                      </children>
                   </VBox>
                </children>
@@ -38,19 +38,19 @@
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Cidade:" />
-                        <TextField fx:id="txtCidade" />
+                        <TextField fx:id="txtCidade" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Bairro:" />
-                        <TextField fx:id="txtBairro" />
+                        <TextField fx:id="txtBairro" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Rua:" />
-                        <TextField fx:id="txtRua" />
+                        <TextField fx:id="txtRua" disable="true" />
                      </children>
                   </VBox>
                </children>
@@ -60,19 +60,19 @@
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Número:" />
-                        <TextField fx:id="txtNumero" />
+                        <TextField fx:id="txtNumero" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="Complemento:" />
-                        <TextField fx:id="txtComplemento" />
+                        <TextField fx:id="txtComplemento" disable="true" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
                         <Label text="CEP:" />
-                        <TextField fx:id="txtCep" onKeyReleased="#txtCepKeyReleased" />
+                        <TextField fx:id="txtCep" disable="true" onKeyReleased="#txtCepKeyReleased" />
                      </children>
                   </VBox>
                </children>
@@ -184,7 +184,7 @@
    <top>
       <Label text="Cadastro de Conta de Gás" BorderPane.alignment="CENTER">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font size="24.0" />
          </font>
          <BorderPane.margin>
             <Insets bottom="15.0" top="30.0" />
