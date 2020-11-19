@@ -1,56 +1,56 @@
 # PROJETO INTEGRADOR - GRUPO 6
-_FATEC ProfÂº Jessen Vidal, SÃ£o JosÃ© dos Campos, 2Âº semestre de 2020, Curso: Tecnologia em Banco de Dados_
+_FATEC Profº Jessen Vidal, São José dos Campos, 2º semestre de 2020, Curso: Tecnologia em Banco de Dados_
 
 _________________________________________________________________________________________________
 ### **Grupo:**
 - Arnaldo Pascoal Almeida Barbosa
 - Carlos Henrique da Silva Lopes: https://www.linkedin.com/in/carlos-henrique-54754a99/
-- JosÃ© Rangel GonÃ§alves Andrade: https://www.linkedin.com/in/rangel-andrade-38130b65
+- José Rangel Gonçalves Andrade: https://www.linkedin.com/in/rangel-andrade-38130b65
 - Marcelo Ricardo Fernandes: https://www.linkedin.com/in/marcelo-fernandes-ab18a986
 - Isabella Rosa Peixoto Segundo: https://www.linkedin.com/in/isabellarps/
 - Helen Cristina Alevato Rodrigues: https://www.linkedin.com/in/helen-alevato-ab15b6177
-- JosÃ© Francisco Forneiro Junior
+- José Francisco Forneiro Junior
 
 
 _________________________________________________________________________________________________
-**Objetivo:** Sistema de digitaÃ§Ã£o e ediÃ§Ã£o de contas
+**Objetivo:** Sistema de digitação e edição de contas
 
 
 _________________________________________________________________________________________________
-# SPRINT 0
+# SPRINT 1
 
 **Pasta:** https://github.com/rangelandrade/PI-GRUPO-6/tree/master/EntregaSprint0
 
-### **Itens entregÃ¡veis:**
+### **Itens entregáveis:**
 **User Stories**
 
-- Prioridade 1 -> Agente digitador, gostaria de poder filtrar e selecionar o tipo de conta desejado referente a um cliente, pois o digitador necessita verificar qual tipo de conta serÃ¡ editada e qual mÃªs e ano de referÃªncia.
-Motivo-> Alterar, visualizar e separar os tipos de contas para auxiliar na correÃ§Ã£o de possÃ­veis erros nas contas.
+- Prioridade 1 -> Agente digitador, gostaria de poder filtrar e selecionar o tipo de conta desejado referente a um cliente, pois o digitador necessita verificar qual tipo de conta será editada e qual mês e ano de referência.
+Motivo-> Alterar, visualizar e separar os tipos de contas para auxiliar na correção de possíveis erros nas contas.
 
-- Prioridade 2 -> Agente digitador, gostaria de poder gerenciar cada tipo de conta em um campo especÃ­fico, que seja no modelo da empresa escolhida, pois a dificuldade estÃ¡ na forma que o digitador coloca os dados no sistema, cada conta tendo seus campos especÃ­ficos ficarÃ¡ mais intuitivo e prÃ¡tico para que o resultado final tenha mais agilidade.
-Motivo-> Analisar, alterar e acessar os campos necessÃ¡rios referentes a cada conta.
+- Prioridade 2 -> Agente digitador, gostaria de poder gerenciar cada tipo de conta em um campo específico, que seja no modelo da empresa escolhida, pois a dificuldade está na forma que o digitador coloca os dados no sistema, cada conta tendo seus campos específicos ficará mais intuitivo e prático para que o resultado final tenha mais agilidade.
+Motivo-> Analisar, alterar e acessar os campos necessários referentes a cada conta.
 
 **Wireframes**
 
 - Telas
 
-**VÃ­deo:** https://youtu.be/moQdPIZ4aZQ
-_________________________________________________________________________________________________
-# SPRINT 1
-
-**Pasta:** https://github.com/rangelandrade/PI-GRUPO-6/tree/master/ProjetoPIGrupo6
-
-### **Itens entregÃ¡veis:**
-**InÃ­cio Banco de Dados**
-
-**InÃ­cio Back End**
-
-**VÃ­deo:** https://drive.google.com/file/d/1OuOShNbeQQrYNLkN5BvrwVTcF5X3buaX/view
-
+**Vídeo:** https://youtu.be/moQdPIZ4aZQ
 _________________________________________________________________________________________________
 # SPRINT 2
 
-**VÃ­deo Explicativo:** https://www.youtube.com/watch?v=HpcrH5d8OK8
+**Pasta:** https://github.com/rangelandrade/PI-GRUPO-6/tree/master/ProjetoPIGrupo6
+
+### **Itens entregáveis:**
+**Início Banco de Dados**
+
+**Início Back End**
+
+**Vídeo:** https://drive.google.com/file/d/1OuOShNbeQQrYNLkN5BvrwVTcF5X3buaX/view
+
+_________________________________________________________________________________________________
+# SPRINT 3
+
+**Vídeo Explicativo:** https://www.youtube.com/watch?v=HpcrH5d8OK8
 
  
 
@@ -59,33 +59,33 @@ ________________________________________________________________________________
 - Java Fx scene builder 
 -	MYSQL Workbench 8.0.( https://dev.mysql.com/downloads/workbench/)
 -	MYSQL SERVER 8.0 (https://www.mysql.com/downloads/)
--	JAVA versÃ£o 11( https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+-	JAVA versão 11( https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 -	Sistema operacional Windows 10 ou superior.
 
  
 
-**CriaÃ§Ã£o das seguintes telas:**
+**Criação das seguintes telas:**
 - Menu 
-- Cadastro usuÃ¡rio 
+- Cadastro usuário 
 - Cadastro cliente
-- Conta Ã¡gua
-- Conta gÃ¡s 
+- Conta água
+- Conta gás 
 - Conta luz
 
  
 
-**ConexÃ£o  com o banco de dados e criaÃ§Ã£o do botÃ£o  cadastrar para as seguintes telas:**
-- Cadastro usuÃ¡rio 
+**Conexão  com o banco de dados e criação do botão  cadastrar para as seguintes telas:**
+- Cadastro usuário 
 - Cadastro cliente
 - Conta de luz
 
  
 
-**CriaÃ§Ã£o do botÃ£o limpar para todas as telas criadas**
+**Criação do botão limpar para todas as telas criadas**
 
  
 
-**ImplementaÃ§Ã£o de mÃ¡scaras para os seguintes itens:**
+**Implementação de máscaras para os seguintes itens:**
 - Cpf
 - Cep
 - Telefone 
@@ -93,4 +93,21 @@ ________________________________________________________________________________
 
  
 
-**ExtraÃ§Ã£o de dados  do cadastro do cliente para a conta de luz usando outro botÃ£o de busca para completar os campos referentes ao cadastro do cliente na conta de luz.**
+**Extração de dados  do cadastro do cliente para a conta de luz usando outro botão de busca para completar os campos referentes ao cadastro do cliente na conta de luz.**
+
+_________________________________________________________________________________________________
+# SPRINT 4
+
+**Adição da tela Cadastro Imóvel**
+- Criação da tabela Imovel no MySQL Workbench
+- Mascara para CEP
+- Implementação do botão Limpar
+- Implementação do busca por cliente
+- Adição de Choice Box 
+
+**Criação das Classes Faltantes**
+
+**Fazer Busca usando a tecla Tab, pelos seguintes códigos**
+- Água: RGI
+- Gás: Código do Usuário
+- Luz: Número de Instalação
