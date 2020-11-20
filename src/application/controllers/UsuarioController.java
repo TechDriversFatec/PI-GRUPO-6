@@ -54,7 +54,7 @@ public class UsuarioController implements Initializable {
     	TextFieldFormatter tff = new TextFieldFormatter();
     	tff.setMask("(##)#####-####");
     	tff.setCaracteresValidos("0123456789");
-    	tff.setTf (txtTelefone);
+    	tff.setTf(txtTelefone);
     	tff.formatter();
     }
     
@@ -63,7 +63,7 @@ public class UsuarioController implements Initializable {
     	TextFieldFormatter tff = new TextFieldFormatter();
     	tff.setMask("###.###.###-##");
     	tff.setCaracteresValidos("0123456789");
-    	tff.setTf (txtCpf);
+    	tff.setTf(txtCpf);
     	tff.formatter();
     }
 
