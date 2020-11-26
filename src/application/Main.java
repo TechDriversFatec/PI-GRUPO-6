@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	private Stage primaryStage;
-    private BorderPane rootLayout;
+    private AnchorPane rootLayout;
 
     @Override
     public void start(Stage primaryStage) {
@@ -31,8 +32,8 @@ public class Main extends Application {
         try {
             // Carrega o root layout do arquivo fxml.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("views/Menu.fxml"));
-            rootLayout = (BorderPane) loader.load();
+            loader.setLocation(Main.class.getResource("views/Login.fxml"));
+            rootLayout = (AnchorPane) loader.load();
             
             // Mostra a scene (cena) contendo o root layout.
             Scene scene = new Scene(rootLayout);
@@ -69,7 +70,7 @@ public class Main extends Application {
 		return primaryStage;
 	}
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         launch(args);
     }
 }
