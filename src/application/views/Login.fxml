@@ -19,11 +19,6 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="btnEntrar" layoutX="188.0" layoutY="336.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="102.0" text="Entrar">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
       <PasswordField fx:id="txtSenha" layoutX="47.0" layoutY="252.0" prefHeight="25.0" prefWidth="382.0">
          <font>
             <Font size="14.0" />
@@ -39,5 +34,10 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
+      <Button fx:id="btnEntrar" layoutX="188.0" layoutY="336.0" mnemonicParsing="false" onAction="#login" prefHeight="39.0" prefWidth="102.0" text="Entrar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

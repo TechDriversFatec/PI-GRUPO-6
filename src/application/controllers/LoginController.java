@@ -1,21 +1,11 @@
 package application.controllers;
 
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.ResourceBundle;
-
-import com.mysql.jdbc.Connection;
-
-import application.models.Usuario;
-import application.models.dao.ConnectionBase;
-import application.models.dao.UsuarioSQL;
+import application.models.dao.LoginSQL;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 
 public class LoginController {
 	
@@ -28,15 +18,17 @@ public class LoginController {
 	@FXML
     private Button btnEntrar;
 	
-	
+	//ERRO QUANDO CLICA NO BOTÃO DE ENTRAR :(
 	@FXML
-    private void logar(ActionEvent event) {
+    public void login(ActionEvent event) throws Exception{
 		
     	String nomeUsuarioLogin = txtNomeUsuario.getText();
-    	String senhaUsuarioLogin = txtSenha.getText();
+    	String senhaLogin = txtSenha.getText();
     	
+    	LoginSQL loginSQL = new LoginSQL();
     	
-
+    	loginSQL.buscarUsuario(nomeUsuarioLogin, senhaLogin);
+    	
     }
 	
 	
