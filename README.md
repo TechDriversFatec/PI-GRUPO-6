@@ -19,7 +19,8 @@ ________________________________________________________________________________
 _________________________________________________________________________________________________
 # SPRINT 1
 
-**Pasta:** https://github.com/rangelandrade/PI-GRUPO-6/tree/master/EntregaSprint0
+- Pasta: https://github.com/rangelandrade/PI-GRUPO-6/tree/master/EntregaSprint0
+- Vídeo: https://youtu.be/moQdPIZ4aZQ
 
 ### **Itens entregáveis:**
 **User Stories**
@@ -34,25 +35,21 @@ Motivo-> Analisar, alterar e acessar os campos necessários referentes a cada co
 
 - Telas
 
-**Vídeo:** https://youtu.be/moQdPIZ4aZQ
 _________________________________________________________________________________________________
 # SPRINT 2
 
-**Pasta:** https://github.com/rangelandrade/PI-GRUPO-6/tree/master/ProjetoPIGrupo6
+- Pasta: https://github.com/rangelandrade/PI-GRUPO-6/tree/master/ProjetoPIGrupo6
+- Vídeo: https://drive.google.com/file/d/1OuOShNbeQQrYNLkN5BvrwVTcF5X3buaX/view
 
 ### **Itens entregáveis:**
 **Início Banco de Dados**
 
 **Início Back End**
 
-**Vídeo:** https://drive.google.com/file/d/1OuOShNbeQQrYNLkN5BvrwVTcF5X3buaX/view
-
 _________________________________________________________________________________________________
 # SPRINT 3
 
-**Vídeo Explicativo:** https://www.youtube.com/watch?v=HpcrH5d8OK8
-
- 
+- Vídeo Explicativo: https://www.youtube.com/watch?v=HpcrH5d8OK8
 
 **Ferramentas utilizadas:** 
 - Eclipse 
@@ -62,8 +59,6 @@ ________________________________________________________________________________
 -	JAVA versão 11( https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 -	Sistema operacional Windows 10 ou superior.
 
- 
-
 **Criação das seguintes telas:**
 - Menu 
 - Cadastro usuário 
@@ -72,18 +67,12 @@ ________________________________________________________________________________
 - Conta gás 
 - Conta luz
 
- 
-
 **Conexão  com o banco de dados e criação do botão  cadastrar para as seguintes telas:**
 - Cadastro usuário 
 - Cadastro cliente
 - Conta de luz
 
- 
-
 **Criação do botão limpar para todas as telas criadas**
-
- 
 
 **Implementação de máscaras para os seguintes itens:**
 - Cpf
@@ -91,27 +80,41 @@ ________________________________________________________________________________
 - Telefone 
 - Data
 
- 
-
 **Extração de dados  do cadastro do cliente para a conta de luz usando outro botão de busca para completar os campos referentes ao cadastro do cliente na conta de luz.**
 
 _________________________________________________________________________________________________
 # SPRINT 4
+
+- Manual Técnico: https://docs.google.com/document/d/1gjrtvYIsYYBayCiXREWgUd-vdLu5SQN6t-x3VPzorGs/edit?usp=sharing
+- Manual da Aplicação:  
+
+## **FUNCIONALIDADES DA ENTREGA DA SPRINT 4**
 
 **Adição da tela Cadastro Imóvel**
 - Criação da tabela Imovel no MySQL Workbench
 - Mascara para CEP
 - Implementação do botão Limpar
 - Implementação do busca por cliente
-- Adição de Choice Box 
+- Adição de Choice Box
 
 **Criação das Classes Faltantes**
 
-**Fazer Busca usando a tecla Tab, pelos seguintes códigos**
-- Água: RGI
-- Gás: Código do Usuário
-- Luz: Número de Instalação
+**Fazer Busca usando a tecla Tab, nas seguintes telas**
+- Conta Água (pelo RGI)
+- Conta Gás (pelo Código do Usuário)
+- Conta Luz (pelo Número de Instalação)
 
-**Link do manual técnico**
+**Adição do Tooltip dentro da telas**
 
-https://docs.google.com/document/d/1gjrtvYIsYYBayCiXREWgUd-vdLu5SQN6t-x3VPzorGs/edit?usp=sharing
+**Implementação da funcionalidade de redirecionar o cadastro para os três tipos de conta, dentro da tela Cadastro Imovel**
+
+**Criptografia da senha do Usuário**
+
+**Tela de Login**
+
+**Priorização dos campos principais, não deixando que o cadastramento prossiga, a menos que os campos especificados estejam preenchidos**
+
+**Caixa de confirmação pop-up para cada tela que tem a funcionlidade de cadastro**
+
+**Criação da tela de Busca**
+- A busca pode ser feita por meio de um filtro, entre Água, Gás ou Luz
