@@ -45,7 +45,11 @@ public class ContaLuzSQL extends ConnectionBase {
 
 		try {
 			PreparedStatement stm = conexao.prepareStatement(
-					"INSERT INTO conta (id_conta,id_cliente_conta,cod_identif_conta, grupo_subgrupo_conta,tpfornecimento_conta,modtarifaria_conta,rotleitura_conta, codfiscal_conta, classe_subclasse_conta, tensaonominal_conta, medidor_conta, id_clienteconsumo_conta, valortotal_conta, numeroinstalacao_conta, consumo_conta, datavenc_conta, contames_conta, bandtarifarias, emissao_conta, leituraanterior_conta, leituraatual_conta, prevproxleit_conta, diasfatura_conta, leit_ant_conta, leit_atual_conta, const_mult_conta)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
+					"INSERT INTO conta (id_conta,id_cliente_conta,cod_identificacao_luz, grupo_subgrupo_conta,tpfornecimento_conta,"
+					+ "modtarifaria_conta,rotleitura_conta, codfiscal_conta, classe_subclasse_conta, tensaonominal_conta, medidor_conta, "
+					+ "id_clienteconsumo_conta, valortotal_conta, cod_identif_conta, consumo_conta, datavenc_conta, contames_conta, "
+					+ "bandtarifarias, emissao_conta, leituraanterior_conta, leituraatual_conta, prevproxleit_conta, diasfatura_conta, "
+					+ "leit_ant_conta, leit_atual_conta, const_mult_conta)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
 
 			stm.setInt(1, luz.getId_contaluz());
 			stm.setInt(2, luz.getId_cliente_contaluz());

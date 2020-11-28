@@ -1,12 +1,19 @@
 package application.controllers;
 
+import java.security.NoSuchAlgorithmException;
+import java.util.Optional;
+
 import application.models.Cliente;
 import application.models.dao.ClienteSQL;
 import application.util.TextFieldFormatter;
+import application.util.ValidationFields;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 
 public class ClienteController {
 
@@ -81,21 +88,37 @@ public class ClienteController {
     
 
     @FXML
-    void executarClickCadastrar(ActionEvent event) {
-    	String nome = txtNomeCliente.getText();
-    	String cpf_cnpj = txtCpf.getText();
-    	String rua = txtRua.getText();
-    	int numero = Integer.parseInt(txtNumero.getText());
-    	String complemento = txtComplemento.getText();
-    	String bairro = txtBairro.getText();
-    	String cidade = txtCidade.getText();
-    	String estado = txtUf.getText();
-    	String cep = txtCep.getText();
-    	String telefone = txtTelefone.getText();
-    
-    	Cliente cliente = new Cliente(0, nome, cpf_cnpj, rua, numero, complemento, bairro, cidade, estado, cep, telefone);
-    	ClienteSQL clienteSQL = new ClienteSQL();
-    	clienteSQL.create(cliente);
+    void executarClickCadastrar(ActionEvent event) throws NoSuchAlgorithmException {
+		Alert alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Caixa de Confirmação");
+//		alert.setHeaderText("Caixa de diálogo de confirmação");
+		alert.setContentText("Deseja realmente cadastrar um novo Cliente");
+
+		Optional<ButtonType> result = alert.showAndWait();
+		if (result.get() == ButtonType.OK) { 
+			
+			// Verifica se há campos obrigatórios não preenchidos
+			boolean camposPreenchidos = ValidationFields.checkEmptyFields(txtNomeCliente, txtCpf, txtCep, txtRua, txtNumero, txtBairro, txtCidade, txtUf, txtCep, txtTelefone);
+
+			if (camposPreenchidos){
+		    	String nome = txtNomeCliente.getText();
+		    	String cpf_cnpj = txtCpf.getText();
+		    	String rua = txtRua.getText();
+		    	int numero = Integer.parseInt(txtNumero.getText());
+		    	String complemento = txtComplemento.getText();
+		    	String bairro = txtBairro.getText();
+		    	String cidade = txtCidade.getText();
+		    	String estado = txtUf.getText();
+		    	String cep = txtCep.getText();
+		    	String telefone = txtTelefone.getText();
+		    
+		    	Cliente cliente = new Cliente(0, nome, cpf_cnpj, rua, numero, complemento, bairro, cidade, estado, cep, telefone);
+		    	ClienteSQL clienteSQL = new ClienteSQL();
+		    	clienteSQL.create(cliente);
+			}
+		} else {
+
+		}
 
     }
 

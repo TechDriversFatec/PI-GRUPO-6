@@ -11,10 +11,11 @@ import application.models.ContaGas;
 public class ContaGasSQL extends ConnectionBase {
 
 	public void create(ContaGas gas) {
-
+		open();
+		
 		try {
 			PreparedStatement stm = conexao.prepareStatement(
-					"INSERT INTO conta (id_conta,id_cliente_conta,cod_identif_conta,seguimento_conta, diasconsumo_conta, tipomedidor_conta, numeromedidor_conta, consumocorrigido_conta,consumo_conta,leit_atual_conta,leit_ant_conta,leituraatual_conta,leituraanterior_conta,datavenc_conta,valortotal_conta)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
+					"INSERT INTO conta (id_conta,id_cliente_conta,cod_identif_conta,segmento_conta, diasconsumo_conta, tipomedidor_conta, numeromedidor_conta, consumocorrigido_conta,consumo_conta,leit_atual_conta,leit_ant_conta,leituraatual_conta,leituraanterior_conta,datavenc_conta,valortotal_conta)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
 
 			stm.setInt(1, gas.getIdContaGas());
 			stm.setInt(2, gas.getIdClienteConta());

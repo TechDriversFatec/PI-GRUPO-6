@@ -15,7 +15,7 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Número de Instalação" />
+                        <Label text="Número de Instalação: *" />
                         <TextField fx:id="txtNumeroIdentificacao" prefHeight="25.0" prefWidth="160.0" />
                      </children>
                   </VBox>
@@ -81,19 +81,19 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Grupo/Subgrupo:" />
+                        <Label text="Grupo/Subgrupo: *" />
                         <TextField fx:id="txtGrupoSubgrupo" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Tp. Fornecimento;" />
+                        <Label text="Tp. Fornecimento; *" />
                         <TextField fx:id="txtTpFornecimento" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Mod. Tarifária:" />
+                        <Label text="Mod. Tarifária: *" />
                         <TextField fx:id="txtModTarifaria" />
                      </children>
                   </VBox>
@@ -103,19 +103,19 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Classe/Subclasse:" />
+                        <Label text="Classe/Subclasse: *" />
                         <TextField fx:id="txtClasseSubclasse" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Tensão Nominal:" />
+                        <Label text="Tensão Nominal: *" />
                         <TextField fx:id="txtTensaoNominal" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Medidor:" />
+                        <Label text="Medidor: *" />
                         <TextField fx:id="txtMedidor" />
                      </children>
                   </VBox>
@@ -125,19 +125,19 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Cód: Identificação Conta:" />
+                        <Label text="Cód: Identificação Conta: *" />
                         <TextField fx:id="txtCodIdentificacaoConta" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Conta Mês:" />
+                        <Label text="Conta Mês: *" />
                         <TextField fx:id="txtContaMes" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Bandeira Tarifária:" />
+                        <Label text="Bandeira Tarifária: *" />
                         <TextField fx:id="txtBandeiraTarifaria" />
                      </children>
                   </VBox>
@@ -147,19 +147,19 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Dias Fatura:" />
+                        <Label text="Dias Fatura: *" />
                         <TextField fx:id="txtDiasFatura" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Consumo:" />
+                        <Label text="Consumo: *" />
                         <TextField fx:id="txtConsumo" />
                      </children>
                   </VBox>
                   <VBox prefHeight="63.0" prefWidth="150.0">
                      <children>
-                        <Label text="Valor Leitura Atual:" />
+                        <Label text="Valor Leitura Atual: *" />
                         <TextField fx:id="txtValorLeituraAtual" />
                      </children>
                   </VBox>
@@ -169,19 +169,19 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Valor Leitura Anterior:" />
+                        <Label text="Valor Leitura Anterior:  *" />
                         <TextField fx:id="txtValorLeituraAnterior" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Data Leitura Atual:" />
+                        <Label text="Data Leitura Atual: " />
                         <DatePicker fx:id="txtDataLeituraAtual" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Data Leitura Anterior:" />
+                        <Label text="Data Leitura Anterior: " />
                         <DatePicker fx:id="txtDataLeituraAnterior" />
                      </children>
                   </VBox>
@@ -191,13 +191,13 @@
                <children>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Data de Vencimento:" />
+                        <Label text="Data de Vencimento: " />
                         <DatePicker fx:id="txtDataVencimento" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="150.0">
                      <children>
-                        <Label text="Total a Pagar:" />
+                        <Label text="Total a Pagar: *" />
                         <TextField fx:id="txtTotalPagar" />
                      </children>
                   </VBox>
