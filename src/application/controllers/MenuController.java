@@ -1,15 +1,20 @@
 package application.controllers;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 
-public class MenuController {
+public class MenuController implements Initializable {
 
 	private BorderPane rootLayout;
 
@@ -33,85 +38,114 @@ public class MenuController {
 
 	@FXML
 	private Button btnBuscar;
+	
+	@FXML
+	public HBox cabecalho;
+	
+	public boolean mostrarCabecalho;
 
 	@FXML
 	private void clickCadastroUsuario(ActionEvent evento) throws IOException {
-		rootLayout = (BorderPane) btnCadastroUsuario.getScene().getRoot();
-
+		rootLayout = (BorderPane) btnCadastroCliente.getScene().getRoot();
+		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
+		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuController.class.getResource("../views/CadastroUsuario.fxml"));
 		AnchorPane cadastroUsuario = (AnchorPane) loader.load();
 
-		rootLayout.setCenter(cadastroUsuario);
+		menuLayout.setCenter(cadastroUsuario);
 	}
 
 	@FXML
 	private void clickCadastroCliente(ActionEvent evento) throws IOException {
 		rootLayout = (BorderPane) btnCadastroCliente.getScene().getRoot();
+		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuController.class.getResource("../views/CadastroCliente.fxml"));
 		AnchorPane cadastroCliente = (AnchorPane) loader.load();
 
-		rootLayout.setCenter(cadastroCliente);
+		menuLayout.setCenter(cadastroCliente);
 	}
 
 	@FXML
 	private void clickContaLuz(ActionEvent evento) throws IOException {
-		rootLayout = (BorderPane) btnContaLuz.getScene().getRoot();
+		rootLayout = (BorderPane) btnCadastroCliente.getScene().getRoot();
+		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuController.class.getResource("../views/ContaLuz.fxml"));
 		BorderPane contaLuz = loader.load();
 
-		rootLayout.setCenter(contaLuz);
+		menuLayout.setCenter(contaLuz);
 	}
 
 	@FXML
 	private void clickContaAgua(ActionEvent evento) throws IOException {
-		rootLayout = (BorderPane) btnContaAgua.getScene().getRoot();
-
+		rootLayout = (BorderPane) btnCadastroCliente.getScene().getRoot();
+		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
+		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuController.class.getResource("../views/ContaAgua.fxml"));
 		BorderPane contaAgua = loader.load();
 
-		rootLayout.setCenter(contaAgua);
-
+		menuLayout.setCenter(contaAgua);
 	}
 
 	@FXML
 	private void clickContaGas(ActionEvent evento) throws IOException {
-		rootLayout = (BorderPane) btnContaGas.getScene().getRoot();
+		rootLayout = (BorderPane) btnCadastroCliente.getScene().getRoot();
+		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuController.class.getResource("../views/ContaGas.fxml"));
 		BorderPane contaGas = loader.load();
 
-		rootLayout.setCenter(contaGas);
+		menuLayout.setCenter(contaGas);
 
 	}
 
 	@FXML
 	private void clickCadastroImovel(ActionEvent evento) throws IOException {
-		rootLayout = (BorderPane) btnCadastroImovel.getScene().getRoot();
+		rootLayout = (BorderPane) btnCadastroCliente.getScene().getRoot();
+		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuController.class.getResource("../views/CadastroImovel.fxml"));
 		BorderPane cadastroImovel = (BorderPane) loader.load();
 
-		rootLayout.setCenter(cadastroImovel);
+		menuLayout.setCenter(cadastroImovel);
 	}
 
 	@FXML
 	private void clickBuscar(ActionEvent evento) throws IOException {
-		rootLayout = (BorderPane) btnBuscar.getScene().getRoot();
+		rootLayout = (BorderPane) btnCadastroCliente.getScene().getRoot();
+		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(MenuController.class.getResource("../views/Busca.fxml"));
         BorderPane buscar = (BorderPane) loader.load();
 
-        rootLayout.setCenter(buscar);
+        menuLayout.setCenter(buscar);
         
+	}
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+//		btnBuscar.setDisable(true);
+//		btnCadastroCliente.setDisable(true);
+//		btnCadastroImovel.setDisable(true);
+//		btnCadastroUsuario.setDisable(true);
+//		btnContaAgua.setDisable(true);
+//		btnContaGas.setDisable(true);
+//		btnContaLuz.setDisable(true);
+		Platform.runLater(() -> {
+			cabecalho.setVisible(mostrarCabecalho);
+	    });
+	}
+
+	public void setMostrarCabecalho(boolean mostrarCabecalho) {
+		this.mostrarCabecalho = mostrarCabecalho;
 	}
 	
 }
