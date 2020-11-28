@@ -11,7 +11,8 @@ import application.models.ContaAgua;
 public class ContaAguaSQL extends ConnectionBase {
 
 	public void create(ContaAgua agua) {
-
+		open();
+		
 		try {
 			PreparedStatement stm = conexao.prepareStatement(
 					"INSERT INTO conta (id_conta,id_cliente_conta,cod_identif_conta,codigo_cliente_conta,tipoligacao_conta,hidrometro_conta,tipofaturamento_conta,periodoconsumo_conta,agua_conta,esgoto_conta,consumo_conta,leit_atual_conta,leit_ant_conta,leituraatual_conta,leituraanterior_conta,datavenc_conta,valortotal_conta)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);");
@@ -49,7 +50,7 @@ public class ContaAguaSQL extends ConnectionBase {
 		open();
 
 		try {
-			PreparedStatement stm = conexao.prepareStatement("SELECT * FROM conta_agua  ORDER BY id ASC");
+			PreparedStatement stm = conexao.prepareStatement("SELECT * FROM conta_agua ORDER BY id ASC");
 
 			ResultSet rs = stm.executeQuery();
 
@@ -70,7 +71,6 @@ public class ContaAguaSQL extends ConnectionBase {
 			close();
 		}
 		return resultado;
-
 	}
 
 }

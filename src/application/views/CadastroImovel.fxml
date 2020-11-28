@@ -32,7 +32,7 @@
                   </TextField>
                </children>
             </HBox>
-            <Label text="Nome do Cliente:" />
+            <Label text="Nome do Cliente: *" />
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <TextField fx:id="txtNomeCliente" prefHeight="25.0" prefWidth="441.0" />
@@ -43,19 +43,19 @@
                   </Button>
                </children>
             </HBox>
-            <Label text="UF:" />
+            <Label text="UF: *" />
             <TextField fx:id="txtUf" />
-            <Label text="Cidade:" />
+            <Label text="Cidade: *" />
             <TextField fx:id="txtCidade" />
-            <Label text="Bairro:" />
+            <Label text="Bairro: *" />
             <TextField fx:id="txtBairro" />
-            <Label text="Rua:" />
+            <Label text="Rua: *" />
             <TextField fx:id="txtRua" />
-            <Label text="Número:" />
+            <Label text="Número: *" />
             <TextField fx:id="txtNumero" />
             <Label text="Complemento:" />
             <TextField fx:id="txtComplemento" />
-            <Label text="CEP:" />
+            <Label text="CEP: *" />
             <TextField fx:id="txtCep" onKeyReleased="#txtCepKeyReleased" />
          </children>
          <BorderPane.margin>
