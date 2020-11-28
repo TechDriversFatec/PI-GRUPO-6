@@ -88,7 +88,7 @@ ________________________________________________________________________________
 - Manual Técnico: https://docs.google.com/document/d/1gjrtvYIsYYBayCiXREWgUd-vdLu5SQN6t-x3VPzorGs/edit?usp=sharing
 - Manual da Aplicação:  
 
-## **FUNCIONALIDADES DA ENTREGA DA SPRINT 4**
+## **FUNCIONALIDADES DA ENTREGA SPRINT 4**
 
 **Adição da tela Cadastro Imóvel**
 - Criação da tabela Imovel no MySQL Workbench
