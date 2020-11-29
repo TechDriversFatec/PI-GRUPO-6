@@ -17,7 +17,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("TecSUS - Gestor de Contas");
-		this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("TecSus.png")));
+//		this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("TecSus.png")));
 		initRootLayout();
 
 		mostrarLogin();

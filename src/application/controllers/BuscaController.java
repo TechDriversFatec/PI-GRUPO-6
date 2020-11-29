@@ -9,17 +9,22 @@ import application.models.DadosListaConta;
 import application.models.dao.DadosListaContaSQL;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
+import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class BuscaController implements Initializable {
+
+	@FXML
+	private Button btnEditar;
 
 	@FXML
 	private RadioButton rbAgua;
@@ -55,10 +60,10 @@ public class BuscaController implements Initializable {
 		int codIdentificacaoConta = Integer.parseInt(txtCodIdentificacao.getText());
 		ArrayList<DadosListaConta> listaContas = new DadosListaContaSQL().all(codIdentificacaoConta);
 		System.out.println(listaContas);
-		
+
 		tableConta.getItems().clear();
-		
-		for(DadosListaConta conta : listaContas) {
+
+		for (DadosListaConta conta : listaContas) {
 			tableConta.getItems().add(conta);
 		}
 //		
@@ -80,8 +85,13 @@ public class BuscaController implements Initializable {
 	private ObservableList<DadosListaConta> listaContas() {
 		int codIdentificacaoConta = Integer.parseInt(txtCodIdentificacao.getText());
 		ArrayList<DadosListaConta> listaConta = new DadosListaContaSQL().all(codIdentificacaoConta);
-        return FXCollections.observableArrayList(listaConta);
-    }
+		return FXCollections.observableArrayList(listaConta);
+	}
+
+	@FXML
+	void clickEditar(ActionEvent event) {
+
+	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -95,7 +105,20 @@ public class BuscaController implements Initializable {
 //		this.rbAgua.setToggleGroup(tipoConta);
 //		this.rbLuz.setToggleGroup(tipoConta);
 //		this.rbGas.setToggleGroup(tipoConta);
+		
+	      Tooltip toolTip3 = new Tooltip("Número de Instalação");
+	      rbLuz.setTooltip(toolTip3);
+
+	      Tooltip toolTip4 = new Tooltip("Código do Usuário");
+	      rbGas.setTooltip(toolTip4);
+
+	      Tooltip toolTip5 = new Tooltip("RGI");
+	      rbAgua.setTooltip(toolTip5);
+
 
 	}
+	
 
 }
+
+

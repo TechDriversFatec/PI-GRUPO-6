@@ -7,7 +7,7 @@ default collate utf8_general_ci;
 use pi_grupo6;
 
 -- Criando a tabela Usuário:
-create table usuario(
+create table pi_grupo6.usuario(
 id_user int not null auto_increment,
 nome_user varchar(40) not null,
 cpf_user varchar(20) not null,
@@ -23,7 +23,7 @@ insert into usuario(nome_user, cpf_user, login_user, senha_user, tipo_user)
 values('Administrador', '00000000000', 'Admin', 'admin', 'Administrador');
 
 -- Criando a tabela Cliente:
-create table cliente(
+create table pi_grupo6.cliente(
 id_cli int not null auto_increment,
 nome_cli varchar(40) not null,
 cpf_cnpj_cli varchar(14) not null,
@@ -39,7 +39,7 @@ primary key(id_cli)
 ) default charset = utf8;
 
 --Criando a tabela conta:
-create table conta(
+create table pi_grupo6.conta(
 id_conta int not null auto_increment,
 id_cliente_conta int,
 cod_identif_conta int,
