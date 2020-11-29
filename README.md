@@ -86,7 +86,7 @@ ________________________________________________________________________________
 # SPRINT 4
 
 - Manual Técnico: https://docs.google.com/document/d/1gjrtvYIsYYBayCiXREWgUd-vdLu5SQN6t-x3VPzorGs/edit?usp=sharing
-- Manual da Aplicação:  
+- Manual da Aplicação:  https://docs.google.com/document/d/1sm-Uz3IaWa2FP-Dy6Gu4_sQ61fB27xHBulweyc-dGdg/edit#
 
 ## **FUNCIONALIDADES DA ENTREGA SPRINT 4**
 
