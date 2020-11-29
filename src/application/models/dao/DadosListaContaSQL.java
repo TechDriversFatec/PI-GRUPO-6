@@ -9,12 +9,6 @@ import java.util.List;
 import application.models.DadosListaConta;
 
 public class DadosListaContaSQL extends ConnectionBase {
-
-	public static void main(String[] args) {
-		DadosListaContaSQL dadosSQL = new DadosListaContaSQL();
-		List dados = dadosSQL.all(15151515);
-		System.out.println(dados);
-	}
 	
 	public ArrayList<DadosListaConta> all(int codigoIdentificacao) {
 
