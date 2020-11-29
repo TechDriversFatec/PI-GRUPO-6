@@ -105,7 +105,7 @@ ________________________________________________________________________________
 - Conta Gás (pelo Código do Usuário)
 - Conta Luz (pelo Número de Instalação)
 
-**Adição do Tooltip dentro da telas**
+**Adição do Tooltip dentro das telas**
 
 **Implementação da funcionalidade de redirecionar o cadastro para os três tipos de conta, dentro da tela Cadastro Imovel**
 
