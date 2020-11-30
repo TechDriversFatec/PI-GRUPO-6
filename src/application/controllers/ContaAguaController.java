@@ -105,6 +105,7 @@ public class ContaAguaController implements Initializable {
 	private TextField txtBairro;
 
 	private Imovel imovel;
+	private Cliente cliente;
 
 	void dadosIniciais(String nomeTitular, Imovel imovel) {
 		txtNomeTitular.setText(nomeTitular);
@@ -194,7 +195,7 @@ public class ContaAguaController implements Initializable {
 				Date dataVencimento = Date.valueOf(txtDataVencimento.getValue());
 				float totalPagar = Float.parseFloat(txtTotalPagar.getText());
 
-				ContaAgua contaAgua = new ContaAgua(0, 1, rgi, codigoCliente, tipoLigacao, hidrometro, tipoFaturamento,
+				ContaAgua contaAgua = new ContaAgua(0, cliente.getId_cli(), rgi, codigoCliente, tipoLigacao, hidrometro, tipoFaturamento,
 						periodoConsumo, agua, esgoto, consumo, valorLeituraAtual, valorLeituraAnterior,
 						dataLeituraAtual, dataLeituraAnterior, dataVencimento, totalPagar);
 				ContaAguaSQL contaAguaSQL = new ContaAguaSQL();
@@ -218,7 +219,7 @@ public class ContaAguaController implements Initializable {
 
 			int codIdentificacao = Integer.parseInt(txtRgi.getText());
 			imovel = imovelSQL.buscarImovelPeloCodIdentificacao(codIdentificacao);
-			Cliente cliente = clienteSQL.buscarClientePorId(imovel.getIdCliente());
+			cliente = clienteSQL.buscarClientePorId(imovel.getIdCliente());
 			txtNomeTitular.setText(cliente.getNome_cli());
 			txtCep.setText(imovel.getCepImovel());
 			txtUf.setText(imovel.getUfImovel());

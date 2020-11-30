@@ -114,6 +114,7 @@ public class ContaLuzController implements Initializable {
 	private DatePicker txtDataVencimento;
 
 	private Imovel imovel;
+	private Cliente cliente;
 
 	void dadosIniciais(String nomeTitular, Imovel imovel) {
 		txtNomeTitular.setText(nomeTitular);
@@ -216,7 +217,7 @@ public class ContaLuzController implements Initializable {
 				float leit_atual_contaluz = Float.parseFloat(txtValorLeituraAtual.getText());
 				float const_mult_contaluz = 0;
 
-				ContaLuz contaluz = new ContaLuz(0, 1, cod_identif_contaluz, grupo_subgrupo_contaluz,
+				ContaLuz contaluz = new ContaLuz(0, cliente.getId_cli(), cod_identif_contaluz, grupo_subgrupo_contaluz,
 						tpfornecimento_contaluz, modtarifaria_contluz, rotleitura_contluz, codfiscal_contaluz,
 						classe_subclasse_contaluz, tensaonominal_contaluz, medidor_contaluz, 1, valortotal_contaluz,
 						numeroinstalacao_contaluz, consumo_contluz, datavenc_contaluz, contames_contaluz,
@@ -244,7 +245,7 @@ public class ContaLuzController implements Initializable {
 
 			int codIdentificacao = Integer.parseInt(txtNumeroIdentificacao.getText());
 			Imovel imovel = imovelSQL.buscarImovelPeloCodIdentificacao(codIdentificacao);
-			Cliente cliente = clienteSQL.buscarClientePorId(imovel.getIdCliente());
+			cliente = clienteSQL.buscarClientePorId(imovel.getIdCliente());
 			txtNomeTitular.setText(cliente.getNome_cli());
 			txtCep.setText(imovel.getCepImovel());
 			txtUf.setText(imovel.getUfImovel());

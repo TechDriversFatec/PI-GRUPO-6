@@ -99,6 +99,7 @@ public class ContaGasController implements Initializable {
 	private TextField txtBairro;
 
 	private Imovel imovel;
+	private Cliente cliente;
 
 	void dadosIniciais(String nomeTitular, Imovel imovel) {
 		txtNomeTitular.setText(nomeTitular);
@@ -184,7 +185,7 @@ public class ContaGasController implements Initializable {
 				Date dataVencimento = Date.valueOf(txtDataVencimento.getValue());
 				float totalPagar = Float.parseFloat(txtTotalPagar.getText());
 
-				ContaGas contaGas = new ContaGas(0, 1, codUsuario, segmento, diasConsumo, tipoMedidor, numeroMedidor,
+				ContaGas contaGas = new ContaGas(0, cliente.getId_cli(), codUsuario, segmento, diasConsumo, tipoMedidor, numeroMedidor,
 						consumoCorrigido, consumo, valorLeituraAtual, valorLeituraAnterior, dataLeituraAtual,
 						dataLeituraAnterior, dataVencimento, totalPagar);
 				ContaGasSQL contaGasSQL = new ContaGasSQL();
@@ -207,7 +208,7 @@ public class ContaGasController implements Initializable {
 
 			int codIdentificacao = Integer.parseInt(txtCodUsuario.getText());
 			Imovel imovel = imovelSQL.buscarImovelPeloCodIdentificacao(codIdentificacao);
-			Cliente cliente = clienteSQL.buscarClientePorId(imovel.getIdCliente());
+			cliente = clienteSQL.buscarClientePorId(imovel.getIdCliente());
 			txtNomeTitular.setText(cliente.getNome_cli());
 			txtCep.setText(imovel.getCepImovel());
 			txtUf.setText(imovel.getUfImovel());

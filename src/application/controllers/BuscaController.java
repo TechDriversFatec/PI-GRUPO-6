@@ -78,16 +78,6 @@ public class BuscaController implements Initializable {
 //		}	
 	}
 
-	public void updatelist() {
-//		for(DadosListaContaSQL listaConta = )
-	}
-
-	private ObservableList<DadosListaConta> listaContas() {
-		int codIdentificacaoConta = Integer.parseInt(txtCodIdentificacao.getText());
-		ArrayList<DadosListaConta> listaConta = new DadosListaContaSQL().all(codIdentificacaoConta);
-		return FXCollections.observableArrayList(listaConta);
-	}
-
 	@FXML
 	void clickEditar(ActionEvent event) {
 

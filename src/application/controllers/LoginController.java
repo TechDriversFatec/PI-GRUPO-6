@@ -2,7 +2,6 @@ package application.controllers;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
-import java.util.ResourceBundle;
 
 import application.models.Usuario;
 import application.models.dao.UsuarioSQL;
@@ -15,7 +14,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 public class LoginController {
 
