@@ -163,7 +163,7 @@ public class ImovelController implements Initializable {
 			BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 					
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MenuController.class.getResource("../views/ContaAgua.fxml"));
+			loader.setLocation(MenuController.class.getResource("/application/views/ContaAgua.fxml"));
 			BorderPane contaAgua = loader.load();
 
 			ContaAguaController controller = loader.getController();
@@ -176,7 +176,7 @@ public class ImovelController implements Initializable {
 			BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 					
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MenuController.class.getResource("../views/ContaGas.fxml"));
+			loader.setLocation(MenuController.class.getResource("/application/views/ContaGas.fxml"));
 			BorderPane contaGas = loader.load();
 
 			ContaGasController controller = loader.getController();
@@ -189,7 +189,7 @@ public class ImovelController implements Initializable {
 			BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(MenuController.class.getResource("../views/ContaLuz.fxml"));
+			loader.setLocation(MenuController.class.getResource("/application/views/ContaLuz.fxml"));
 			BorderPane contaLuz = loader.load();
 
 			ContaLuzController controller = loader.getController();

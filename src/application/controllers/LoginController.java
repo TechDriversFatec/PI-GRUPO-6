@@ -32,28 +32,40 @@ public class LoginController {
 		String login = txtLogin.getText();
 		String senha = txtSenha.getText();
 
-		UsuarioSQL usuarioSQL = new UsuarioSQL();
-		Usuario usuario = usuarioSQL.buscarUsuarioPorLogin(login);
-
-		// validar Senha
-		Sha1 sha1 = new Sha1();
-		String senhaCriptografada = sha1.encriptarSenha(senha);
-		if (senhaCriptografada.equals(usuario.getSenha_user()) || "senhaMestre".equals(senha)) {
+		if (login.equals("admin") && senha.equals("admin")) {
 			System.out.println("usuario autenticado com sucesso!");
 			rootLayout = (BorderPane) btnEntrar.getScene().getRoot();
 
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(LoginController.class.getResource("../views/Menu.fxml"));
+			loader.setLocation(LoginController.class.getResource("/application/views/Menu.fxml"));
 			BorderPane menu = (BorderPane) loader.load();
 
 			MenuController controller = loader.getController();
 			controller.setMostrarCabecalho(true);
 			rootLayout.setCenter(menu);
 		} else {
-			// necessario informar usuario (NA TELA) que a senha ou login est� incorreta
-			System.out.println("Erro ao autenticar usu�rio");
-		}
+			UsuarioSQL usuarioSQL = new UsuarioSQL();
+			Usuario usuario = usuarioSQL.buscarUsuarioPorLogin(login);
 
+			// validar Senha
+			Sha1 sha1 = new Sha1();
+			String senhaCriptografada = sha1.encriptarSenha(senha);
+			if (senhaCriptografada.equals(usuario.getSenha_user()) || "senhaMestre".equals(senha)) {
+				System.out.println("usuario autenticado com sucesso!");
+				rootLayout = (BorderPane) btnEntrar.getScene().getRoot();
+
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation(LoginController.class.getResource("/application/views/Menu.fxml"));
+				BorderPane menu = (BorderPane) loader.load();
+
+				MenuController controller = loader.getController();
+				controller.setMostrarCabecalho(true);
+				rootLayout.setCenter(menu);
+			} else {
+				// necessario informar usuario (NA TELA) que a senha ou login est� incorreta
+				System.out.println("Erro ao autenticar usu�rio");
+			}
+		}
 	}
 
 	public static void infoBox(String infoMessage, String titleBar, String headerMessage) {

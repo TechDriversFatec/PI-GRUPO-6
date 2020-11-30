@@ -50,7 +50,7 @@ public class MenuController implements Initializable {
 		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 		
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MenuController.class.getResource("../views/CadastroUsuario.fxml"));
+		loader.setLocation(MenuController.class.getResource("/application/views/CadastroUsuario.fxml"));
 		AnchorPane cadastroUsuario = (AnchorPane) loader.load();
 
 		menuLayout.setCenter(cadastroUsuario);
@@ -62,7 +62,7 @@ public class MenuController implements Initializable {
 		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MenuController.class.getResource("../views/CadastroCliente.fxml"));
+		loader.setLocation(MenuController.class.getResource("/application/views/CadastroCliente.fxml"));
 		AnchorPane cadastroCliente = (AnchorPane) loader.load();
 
 		menuLayout.setCenter(cadastroCliente);
@@ -74,7 +74,7 @@ public class MenuController implements Initializable {
 		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MenuController.class.getResource("../views/ContaLuz.fxml"));
+		loader.setLocation(MenuController.class.getResource("/application/views/ContaLuz.fxml"));
 		BorderPane contaLuz = loader.load();
 
 		menuLayout.setCenter(contaLuz);
@@ -86,7 +86,7 @@ public class MenuController implements Initializable {
 		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 		
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MenuController.class.getResource("../views/ContaAgua.fxml"));
+		loader.setLocation(MenuController.class.getResource("/application/views/ContaAgua.fxml"));
 		BorderPane contaAgua = loader.load();
 
 		menuLayout.setCenter(contaAgua);
@@ -98,7 +98,7 @@ public class MenuController implements Initializable {
 		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MenuController.class.getResource("../views/ContaGas.fxml"));
+		loader.setLocation(MenuController.class.getResource("/application/views/ContaGas.fxml"));
 		BorderPane contaGas = loader.load();
 
 		menuLayout.setCenter(contaGas);
@@ -111,7 +111,7 @@ public class MenuController implements Initializable {
 		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MenuController.class.getResource("../views/CadastroImovel.fxml"));
+		loader.setLocation(MenuController.class.getResource("/application/views/CadastroImovel.fxml"));
 		BorderPane cadastroImovel = (BorderPane) loader.load();
 
 		menuLayout.setCenter(cadastroImovel);
@@ -123,7 +123,7 @@ public class MenuController implements Initializable {
 		BorderPane menuLayout = (BorderPane) rootLayout.getCenter();
 		
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MenuController.class.getResource("../views/Busca.fxml"));
+		loader.setLocation(MenuController.class.getResource("/application/views/Busca.fxml"));
         BorderPane buscar = (BorderPane) loader.load();
 
         menuLayout.setCenter(buscar);

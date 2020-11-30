@@ -17,7 +17,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("TecSUS - Gestor de Contas");
-//		this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("TecSus.png")));
+		this.primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("TecSUS.png")));
 		initRootLayout();
 
 		mostrarLogin();
@@ -30,9 +30,9 @@ public class Main extends Application {
 		try {
 			// Carrega o root layout do arquivo fxml.
 			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(Main.class.getResource("views/Login.fxml"));
+//			loader.setLocation(Main.class.getResource("/application/views/Login.fxml"));
 //			rootLayout = (BorderPane) loader.load();
-			loader.setLocation(Main.class.getResource("views/Container.fxml"));
+			loader.setLocation(Main.class.getResource("/application/views/Container.fxml"));
 			rootLayout = (BorderPane) loader.load();
 
 			// Mostra a scene (cena) contendo o root layout.
@@ -48,7 +48,7 @@ public class Main extends Application {
         try {
             // Carrega o person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("views/login.fxml"));
+            loader.setLocation(Main.class.getResource("/application/views/Login.fxml"));
             BorderPane login = (BorderPane) loader.load();
             
             // Define o person overview dentro do root layout.
