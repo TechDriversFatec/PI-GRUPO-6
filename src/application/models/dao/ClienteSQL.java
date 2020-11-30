@@ -48,11 +48,12 @@ public class ClienteSQL extends ConnectionBase {
 		Cliente cliente = new Cliente();
 		
 		try {
-			PreparedStatement stm = conexao.prepareStatement("SELECT nome_cli FROM Cliente WHERE id_cli='" + idCliente + "'");
+			PreparedStatement stm = conexao.prepareStatement("SELECT id_cli, nome_cli FROM Cliente WHERE id_cli='" + idCliente + "'");
 			ResultSet rs = stm.executeQuery();
 
 			if (rs != null && rs.next()) {
-				cliente.setNome_cli(rs.getString(1));	
+				cliente.setId_cli(rs.getInt(1));
+				cliente.setNome_cli(rs.getString(2));	
 			}
 			
 		} catch(SQLException e) {
