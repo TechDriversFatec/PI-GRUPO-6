@@ -16,7 +16,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 
 public class LoginController {
 
@@ -52,8 +51,8 @@ public class LoginController {
 			controller.setMostrarCabecalho(true);
 			rootLayout.setCenter(menu);
 		} else {
-			// necessario informar usuario (NA TELA) que a senha ou login está incorreta
-			System.out.println("Erro ao autenticar usuário");
+			// necessario informar usuario (NA TELA) que a senha ou login estï¿½ incorreta
+			System.out.println("Erro ao autenticar usuï¿½rio");
 		}
 
 	}
